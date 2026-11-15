@@ -5,6 +5,16 @@ __pycache__/
 .venv/
 venv/
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_rsa.*
+*credentials*
+*secrets*
+**/service-account*.json
+**/auth.json
 *.log
 .idea/
 .vscode/
