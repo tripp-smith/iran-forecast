@@ -1,0 +1,478 @@
+date,direction,rank,driver_text
+2026-03-19,toward,1,Accelerated Iranian missile inventory depletion combined with internal regime pressure.
+2026-03-19,toward,2,Scaled-up coalition escort operations plus insurance backstop mechanisms.
+2026-03-19,toward,3,Diplomatic openings via Oman or Qatar that secure proxy stand-downs.
+2026-03-19,toward,4,Demonstrated 30-day attack-free window shifting buyer and insurer risk models.
+2026-03-19,toward,5,Sustained low-intensity Iranian retaliation and proxy activation cycles.
+2026-03-19,toward,6,Persistent insurer and seafarer risk aversion persisting weeks after any pause.
+2026-03-19,toward,7,Potential mine-laying or coastal battery reactivation.
+2026-03-19,toward,8,Second-order buyer shifts to non-Gulf suppliers locking in long-term contracts.
+2026-03-19,against,1,Sustained low-intensity Iranian retaliation and proxy activation cycles.
+2026-03-19,against,2,Persistent insurer and seafarer risk aversion persisting weeks after any pause.
+2026-03-19,against,3,Potential mine-laying or coastal battery reactivation.
+2026-03-19,against,4,Second-order buyer shifts to non-Gulf suppliers locking in long-term contracts.
+2026-03-20,toward,1,Coalition success in suppressing Iranian coastal and missile assets sufficiently for escorted pilot transits.
+2026-03-20,toward,2,Iranian resource exhaustion forcing de facto restraint on energy targets.
+2026-03-20,toward,3,Diplomatic channels (Oman/Qatar) producing verifiable stand-down commitments.
+2026-03-20,toward,4,Insurer backstops combined with 14–21 day attack-free window.
+2026-03-20,toward,5,Escalation into sustained energy-infrastructure targeting (South Pars precedent).
+2026-03-20,toward,6,Insurer and seafarer risk aversion persisting weeks after any kinetic pause.
+2026-03-20,toward,7,Mine/GPS-jamming persistence plus proxy autonomy.
+2026-03-20,toward,8,Buyer contract shifts and pipeline rerouting locking in alternative supply chains.
+2026-03-20,against,1,Escalation into sustained energy-infrastructure targeting (South Pars precedent).
+2026-03-20,against,2,Insurer and seafarer risk aversion persisting weeks after any kinetic pause.
+2026-03-20,against,3,Mine/GPS-jamming persistence plus proxy autonomy.
+2026-03-20,against,4,Buyer contract shifts and pipeline rerouting locking in alternative supply chains.
+2026-03-21,toward,1,Coalition success in suppressing Iranian coastal and missile assets sufficiently for escorted pilot transits.
+2026-03-21,toward,2,Iranian resource exhaustion forcing de facto restraint on energy targets.
+2026-03-21,toward,3,Diplomatic channels (Oman/Qatar) producing verifiable stand-down commitments.
+2026-03-21,toward,4,Insurer backstops combined with 14–21 day attack-free window.
+2026-03-21,toward,5,Escalation into sustained energy-infrastructure targeting (Ras Laffan precedent).
+2026-03-21,toward,6,Insurer and seafarer risk aversion persisting weeks after any kinetic pause.
+2026-03-21,toward,7,Mine/GPS-jamming persistence plus proxy autonomy.
+2026-03-21,toward,8,Buyer contract shifts and pipeline rerouting locking in alternative supply chains.
+2026-03-21,against,1,Escalation into sustained energy-infrastructure targeting (Ras Laffan precedent).
+2026-03-21,against,2,Insurer and seafarer risk aversion persisting weeks after any kinetic pause.
+2026-03-21,against,3,Mine/GPS-jamming persistence plus proxy autonomy.
+2026-03-21,against,4,Buyer contract shifts and pipeline rerouting locking in alternative supply chains.
+2026-03-22,toward,1,Sustained lull plus successful escorted convoys building insurer confidence incrementally.
+2026-03-22,toward,2,Iranian resource exhaustion limiting direct strikes.
+2026-03-22,toward,3,Coalition escort expansion reducing proxy success rate.
+2026-03-22,toward,4,14–21 day attack-free window shifting seafarer and buyer risk models.
+2026-03-22,toward,5,Proxy drone activity offsetting direct-strike lull.
+2026-03-22,toward,6,Long-term LNG infrastructure damage locking in force majeure.
+2026-03-22,toward,7,Insurer and crew risk aversion persisting weeks after any pause.
+2026-03-22,toward,8,Buyer contract shifts to alternative suppliers.
+2026-03-22,against,1,Proxy drone activity offsetting direct-strike lull.
+2026-03-22,against,2,Long-term LNG infrastructure damage locking in force majeure.
+2026-03-22,against,3,Insurer and crew risk aversion persisting weeks after any pause.
+2026-03-22,against,4,Buyer contract shifts to alternative suppliers.
+2026-03-23,toward,1,Consecutive successful escorted convoys and extended lull building incremental insurer/seafarer confidence.
+2026-03-23,toward,2,Declining proxy incident rate reducing perceived threat.
+2026-03-23,toward,3,Modest export-volume recovery signaling partial Gulf-state operational continuity.
+2026-03-23,toward,4,Exploratory diplomatic channel creating potential off-ramp without immediate escalation.
+2026-03-23,toward,5,Persistent long-term LNG infrastructure damage enforcing extended force majeure.
+2026-03-23,toward,6,Insurance and crew clauses remaining restrictive despite marginal premium softening.
+2026-03-23,toward,7,Risk of proxy flare-up reversing recent lull gains.
+2026-03-23,toward,8,Buyer behavior still favoring locked-in alternative supply contracts.
+2026-03-23,against,1,Persistent long-term LNG infrastructure damage enforcing extended force majeure.
+2026-03-23,against,2,Insurance and crew clauses remaining restrictive despite marginal premium softening.
+2026-03-23,against,3,Risk of proxy flare-up reversing recent lull gains.
+2026-03-23,against,4,Buyer behavior still favoring locked-in alternative supply contracts.
+2026-03-24,toward,1,Successive incident-free escorted convoys and zero-proxy window expanding operational confidence.
+2026-03-24,toward,2,Rising daily transit counts demonstrating insurer tolerance thresholds are being tested successfully.
+2026-03-24,toward,3,Incremental export-volume gains reducing immediate supply-shock perception.
+2026-03-24,toward,4,Substantive diplomatic channel lowering perceived re-escalation probability.
+2026-03-24,toward,5,Unresolved multi-year LNG repair timelines perpetuating force majeure.
+2026-03-24,toward,6,Persistent restrictive insurance clauses despite premium softening.
+2026-03-24,toward,7,Potential for rapid proxy reactivation if direct lull ends.
+2026-03-24,toward,8,Continued buyer preference for diversified non-Gulf term contracts.
+2026-03-24,against,1,Unresolved multi-year LNG repair timelines perpetuating force majeure.
+2026-03-24,against,2,Persistent restrictive insurance clauses despite premium softening.
+2026-03-24,against,3,Potential for rapid proxy reactivation if direct lull ends.
+2026-03-24,against,4,Continued buyer preference for diversified non-Gulf term contracts.
+2026-03-25,toward,1,Ongoing diplomatic signaling from Oman creating potential off-ramps.
+2026-03-25,toward,2,Coalition planning for escorts that could eventually suppress threats.
+2026-03-25,toward,3,Iranian resource constraints possibly limiting sustained high-intensity strikes.
+2026-03-25,toward,4,Gradual testing of selective Iranian vetting corridors.
+2026-03-25,toward,5,Renewed 24 March strikes resetting any pause momentum.
+2026-03-25,toward,6,Persistent low transit volumes and insurer caution.
+2026-03-25,toward,7,Long-lead LNG infrastructure repairs enforcing force majeure.
+2026-03-25,toward,8,Proxy and mine threats maintaining seafarer risk aversion.
+2026-03-25,against,1,Renewed 24 March strikes resetting any pause momentum.
+2026-03-25,against,2,Persistent low transit volumes and insurer caution.
+2026-03-25,against,3,Long-lead LNG infrastructure repairs enforcing force majeure.
+2026-03-25,against,4,Proxy and mine threats maintaining seafarer risk aversion.
+2026-03-26,toward,1,Coalition convoy planning and mine-clearance momentum potentially enabling first operational tests.
+2026-03-26,toward,2,Oman-noted incremental diplomatic progress lowering immediate re-escalation odds.
+2026-03-26,toward,3,Iranian proxy activity remaining low-intensity rather than scaling.
+2026-03-26,toward,4,Steady (if minimal) export flows preventing total supply collapse.
+2026-03-26,toward,5,Fresh proxy drone incident resetting any pause perception.
+2026-03-26,toward,6,Explicit delays in convoy execution due to persistent mine/ISR threats.
+2026-03-26,toward,7,Unchanged elevated insurance terms and crew restrictions.
+2026-03-26,toward,8,Multi-year LNG infrastructure lock-in sustaining force majeure declarations.
+2026-03-26,against,1,Fresh proxy drone incident resetting any pause perception.
+2026-03-26,against,2,Explicit delays in convoy execution due to persistent mine/ISR threats.
+2026-03-26,against,3,Unchanged elevated insurance terms and crew restrictions.
+2026-03-26,against,4,Multi-year LNG infrastructure lock-in sustaining force majeure declarations.
+2026-03-27,toward,1,Successful execution of first large-scale escorted convoy demonstrating operational viability.
+2026-03-27,toward,2,Observable premium softening in broker syndicates signaling shifting insurer risk models.
+2026-03-27,toward,3,48-hour direct-strike absence combined with proxy interception success.
+2026-03-27,toward,4,Preliminary diplomatic confidence-building agreement creating a visible off-ramp.
+2026-03-27,toward,5,Persistent multi-year LNG repair timelines sustaining force majeure.
+2026-03-27,toward,6,P&I and crew-consent clauses remaining fully restrictive.
+2026-03-27,toward,7,Commercial volumes still far below the 80% threshold.
+2026-03-27,toward,8,Risk of rapid proxy re-escalation if diplomatic measures stall.
+2026-03-27,against,1,Persistent multi-year LNG repair timelines sustaining force majeure.
+2026-03-27,against,2,P&I and crew-consent clauses remaining fully restrictive.
+2026-03-27,against,3,Commercial volumes still far below the 80% threshold.
+2026-03-27,against,4,Risk of rapid proxy re-escalation if diplomatic measures stall.
+2026-03-28,toward,1,Continued Oman-mediated indirect channels providing a potential off-ramp.
+2026-03-28,toward,2,Coalition planning for escorts that could eventually test threat suppression.
+2026-03-28,toward,3,Iranian selective vetting of certain (mostly Asian) vessels allowing minimal sanctioned flows.
+2026-03-28,toward,4,Gradual attrition of Iranian/proxy munitions stocks.
+2026-03-28,toward,5,Persistent 92–95% transit collapse and insurer cancellations enforcing commercial paralysis.
+2026-03-28,toward,6,Multi-year Ras Laffan repair timeline and force majeure locking in LNG/export shortfalls.
+2026-03-28,toward,7,Elevated premiums (1–10%) and P&I exclusions sustaining seafarer and buyer aversion.
+2026-03-28,toward,8,Houthi readiness to open a second front at Bab el-Mandeb.
+2026-03-28,against,1,Persistent 92–95% transit collapse and insurer cancellations enforcing commercial paralysis.
+2026-03-28,against,2,Multi-year Ras Laffan repair timeline and force majeure locking in LNG/export shortfalls.
+2026-03-28,against,3,Elevated premiums (1–10%) and P&I exclusions sustaining seafarer and buyer aversion.
+2026-03-28,against,4,Houthi readiness to open a second front at Bab el-Mandeb.
+2026-03-29,toward,1,Back-to-back successful escorted convoys proving repeatable threat suppression.
+2026-03-29,toward,2,Continued premium softening and explicit 14-day diplomatic checkpoints.
+2026-03-29,toward,3,Rising daily transit counts with non-sanctioned participation.
+2026-03-29,toward,4,Sustained 72-hour direct-strike absence.
+2026-03-29,toward,5,Unchanged multi-year Ras Laffan repairs and force majeure declarations.
+2026-03-29,toward,6,P&I and crew-consent clauses still fully restrictive.
+2026-03-29,toward,7,Commercial volumes still well below 80% threshold.
+2026-03-29,toward,8,Potential for proxy adaptation following two successful convoys.
+2026-03-29,against,1,Unchanged multi-year Ras Laffan repairs and force majeure declarations.
+2026-03-29,against,2,P&I and crew-consent clauses still fully restrictive.
+2026-03-29,against,3,Commercial volumes still well below 80% threshold.
+2026-03-29,against,4,Potential for proxy adaptation following two successful convoys.
+2026-03-30,toward,1,Three consecutive successful escorted convoys establishing repeatable operational precedent.
+2026-03-30,toward,2,First diplomatic checkpoint passed on schedule with explicit extension.
+2026-03-30,toward,3,Accelerated daily transit growth and broker quote tightening.
+2026-03-30,toward,4,Sustained multi-day direct-strike absence.
+2026-03-30,toward,5,Persistent multi-year Ras Laffan physical damage and force majeure.
+2026-03-30,toward,6,Full P&I reinstatement and crew-consent restrictions still in force.
+2026-03-30,toward,7,Transit volumes still below 20% of baseline.
+2026-03-30,toward,8,Residual proxy adaptation risk after repeated convoy successes.
+2026-03-30,against,1,Persistent multi-year Ras Laffan physical damage and force majeure.
+2026-03-30,against,2,Full P&I reinstatement and crew-consent restrictions still in force.
+2026-03-30,against,3,Transit volumes still below 20% of baseline.
+2026-03-30,against,4,Residual proxy adaptation risk after repeated convoy successes.
+2026-03-31,toward,1,Ongoing Oman-mediated indirect channels and reported US draft plan creating potential diplomatic off-ramp.
+2026-03-31,toward,2,Coalition planning for escorts that could eventually test suppression capabilities.
+2026-03-31,toward,3,Selective ghost-fleet operations preventing total export collapse.
+2026-03-31,toward,4,Gradual munitions attrition on Iranian/proxy side.
+2026-03-31,toward,5,Persistent low transit volumes and ongoing projectile incidents enforcing commercial paralysis.
+2026-03-31,toward,6,Prohibitive insurance cancellations and P&I exclusions sustaining seafarer/buyer aversion.
+2026-03-31,toward,7,Multi-year Ras Laffan repairs and force majeure locking in LNG/export shortfalls.
+2026-03-31,toward,8,Iranian selective passage regime and proxy adaptation risk.
+2026-03-31,against,1,Persistent low transit volumes and ongoing projectile incidents enforcing commercial paralysis.
+2026-03-31,against,2,Prohibitive insurance cancellations and P&I exclusions sustaining seafarer/buyer aversion.
+2026-03-31,against,3,Multi-year Ras Laffan repairs and force majeure locking in LNG/export shortfalls.
+2026-03-31,against,4,Iranian selective passage regime and proxy adaptation risk.
+2026-04-01,toward,1,Oman-mediated indirect channels and reported US draft plan offering a potential off-ramp.
+2026-04-01,toward,2,Coalition planning for escorts and US postponement of further strikes creating limited breathing room.
+2026-04-01,toward,3,Selective ghost-fleet operations preventing total export collapse.
+2026-04-01,toward,4,Gradual Iranian/proxy munitions attrition.
+2026-04-01,toward,5,Persistent 92–95% transit collapse and selective regime enforcing commercial paralysis.
+2026-04-01,toward,6,Elevated premiums (1–10%+) and P&I exclusions sustaining seafarer/buyer aversion.
+2026-04-01,toward,7,Multi-year Ras Laffan repairs and force majeure locking in LNG/export shortfalls.
+2026-04-01,toward,8,Houthi signaling of Bab el-Mandeb risks and ongoing projectile incidents.
+2026-04-01,against,1,Persistent 92–95% transit collapse and selective regime enforcing commercial paralysis.
+2026-04-01,against,2,Elevated premiums (1–10%+) and P&I exclusions sustaining seafarer/buyer aversion.
+2026-04-01,against,3,Multi-year Ras Laffan repairs and force majeure locking in LNG/export shortfalls.
+2026-04-01,against,4,Houthi signaling of Bab el-Mandeb risks and ongoing projectile incidents.
+2026-04-02,toward,1,Modest premium easing and conditional US reprieve language creating limited diplomatic window.
+2026-04-02,toward,2,Oman emphasis on off-ramps and ongoing indirect channels.
+2026-04-02,toward,3,Ghost-fleet continuity preventing total export shutdown.
+2026-04-02,toward,4,Iranian munitions attrition over five weeks of operations.
+2026-04-02,toward,5,Fresh AQUA 1 attack and consolidated selective regime enforcing paralysis.
+2026-04-02,toward,6,Persistent safety-driven traffic collapse despite slight premium softening.
+2026-04-02,toward,7,Multi-year Ras Laffan/Qatar LNG constraints and ~10 mbpd Gulf curtailments.
+2026-04-02,toward,8,Houthi explicit Bab el-Mandeb signaling.
+2026-04-02,against,1,Fresh AQUA 1 attack and consolidated selective regime enforcing paralysis.
+2026-04-02,against,2,Persistent safety-driven traffic collapse despite slight premium softening.
+2026-04-02,against,3,Multi-year Ras Laffan/Qatar LNG constraints and ~10 mbpd Gulf curtailments.
+2026-04-02,against,4,Houthi explicit Bab el-Mandeb signaling.
+2026-04-03,toward,1,Conditional US reprieve language and Iranian ceasefire request creating explicit 6 April deadline pressure.
+2026-04-03,toward,2,Oman “constructive” contacts and coalition ISR neutralization precedent.
+2026-04-03,toward,3,Ghost-fleet continuity and limited Omani-water evasion preventing total shutdown.
+2026-04-03,toward,4,Premium softening in pockets despite behavioral suppression.
+2026-04-03,toward,5,Persistent low single-digit open transits and selective regime.
+2026-04-03,toward,6,Safety-driven crew refusals and P&I exclusions overriding price relief.
+2026-04-03,toward,7,Binding 3–5 year Ras Laffan constraints and ~10 mbpd curtailments.
+2026-04-03,toward,8,Unresolved 6 April deadline and Houthi readiness posture.
+2026-04-03,against,1,Persistent low single-digit open transits and selective regime.
+2026-04-03,against,2,Safety-driven crew refusals and P&I exclusions overriding price relief.
+2026-04-03,against,3,Binding 3–5 year Ras Laffan constraints and ~10 mbpd curtailments.
+2026-04-03,against,4,Unresolved 6 April deadline and Houthi readiness posture.
+2026-04-04,toward,1,Iran-Oman transit-monitoring protocol and successful French vessel transit expanding selective tolerance.
+2026-04-04,toward,2,Trump conditional reprieve language tied to explicit Hormuz condition and reported Iranian ceasefire request.
+2026-04-04,toward,3,Chubb/US reinsurance availability providing limited coverage backstop.
+2026-04-04,toward,4,Ghost-fleet continuity preventing total export collapse.
+2026-04-04,toward,5,Persistent 2–5 open transits and safety-driven crew/P&I suppression.
+2026-04-04,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-04,toward,7,6 April reprieve deadline with no confirmed opening.
+2026-04-04,toward,8,Ongoing selective regime and Houthi signaling.
+2026-04-04,against,1,Persistent 2–5 open transits and safety-driven crew/P&I suppression.
+2026-04-04,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-04,against,3,6 April reprieve deadline with no confirmed opening.
+2026-04-04,against,4,Ongoing selective regime and Houthi signaling.
+2026-04-05,toward,1,Iran-Oman monitoring protocol advancement and southern-route precedents expanding selective tolerance.
+2026-04-05,toward,2,Trump 48-hour deadline and multinational (35+ countries) reopening discussions creating near-term pressure.
+2026-04-05,toward,3,Marginal transit uptick (9–12 vessels) and absence of attacks in past 48 hours.
+2026-04-05,toward,4,Limited reinsurance availability providing marginal coverage backstop.
+2026-04-05,toward,5,Volumes still ~90%+ below baseline with safety-driven suppression dominant.
+2026-04-05,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-05,toward,7,6 April reprieve deadline uncertainty and selective regime/tolls.
+2026-04-05,toward,8,Houthi signaling and IRGC control retention.
+2026-04-05,against,1,Volumes still ~90%+ below baseline with safety-driven suppression dominant.
+2026-04-05,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-05,against,3,6 April reprieve deadline uncertainty and selective regime/tolls.
+2026-04-05,against,4,Houthi signaling and IRGC control retention.
+2026-04-06,toward,1,Gradual transit uptick and southern Omani-water routing precedents expanding selective tolerance.
+2026-04-06,toward,2,Absence of attacks since early April combined with no immediate strike response to deadline.
+2026-04-06,toward,3,Active Chubb/US reinsurance providing marginal backstop.
+2026-04-06,toward,4,Continued diplomatic signaling around reprieve review.
+2026-04-06,toward,5,Volumes still ~88% below baseline with safety-driven crew/P&I suppression dominant.
+2026-04-06,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-06,toward,7,Iranian rejection of full reopening deadline and retention of selective regime.
+2026-04-06,toward,8,Persistent Houthi Bab el-Mandeb contingency signaling.
+2026-04-06,against,1,Volumes still ~88% below baseline with safety-driven crew/P&I suppression dominant.
+2026-04-06,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-06,against,3,Iranian rejection of full reopening deadline and retention of selective regime.
+2026-04-06,against,4,Persistent Houthi Bab el-Mandeb contingency signaling.
+2026-04-07,toward,1,Fourth consecutive daily transit increase and southern routing expansion demonstrating practical tolerance growth.
+2026-04-07,toward,2,72-hour reprieve review extension citing measured compliance.
+2026-04-07,toward,3,Iran-Oman protocol reaching draft implementation annex.
+2026-04-07,toward,4,Sustained 96-hour attack-free period.
+2026-04-07,toward,5,Volumes still ~85% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-07,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-07,toward,7,Selective regime and ghost-fleet dominance unchanged.
+2026-04-07,toward,8,Houthi contingency posture intact.
+2026-04-07,against,1,Volumes still ~85% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-07,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-07,against,3,Selective regime and ghost-fleet dominance unchanged.
+2026-04-07,against,4,Houthi contingency posture intact.
+2026-04-08,toward,1,Fifth consecutive daily transit increase and southern routing scale-up showing operational tolerance expansion.
+2026-04-08,toward,2,Additional 48-hour reprieve extension with explicit reference to Oman protocol progress.
+2026-04-08,toward,3,Protocol draft annex now in initial testing phase.
+2026-04-08,toward,4,120-hour attack-free period.
+2026-04-08,toward,5,Volumes still ~80% below baseline with ongoing safety-driven crew/P&I suppression.
+2026-04-08,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-08,toward,7,Selective regime and ghost-fleet dominance unchanged.
+2026-04-08,toward,8,Houthi contingency posture intact.
+2026-04-08,against,1,Volumes still ~80% below baseline with ongoing safety-driven crew/P&I suppression.
+2026-04-08,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-08,against,3,Selective regime and ghost-fleet dominance unchanged.
+2026-04-08,against,4,Houthi contingency posture intact.
+2026-04-09,toward,1,Sixth consecutive daily transit increase and southern routing now at 40% share showing operational tolerance expansion.
+2026-04-09,toward,2,Additional 24-hour reprieve extension explicitly referencing verified Oman protocol testing.
+2026-04-09,toward,3,First successful monitored southern-route transit under joint protocol.
+2026-04-09,toward,4,144-hour attack-free period.
+2026-04-09,toward,5,Volumes still ~74% below baseline with ongoing safety-driven crew/P&I suppression.
+2026-04-09,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-09,toward,7,Selective regime and ghost-fleet dominance unchanged.
+2026-04-09,toward,8,Houthi contingency posture intact.
+2026-04-09,against,1,Volumes still ~74% below baseline with ongoing safety-driven crew/P&I suppression.
+2026-04-09,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-09,against,3,Selective regime and ghost-fleet dominance unchanged.
+2026-04-09,against,4,Houthi contingency posture intact.
+2026-04-10,toward,1,Seventh consecutive daily transit increase with southern routing share reaching 45%.
+2026-04-10,toward,2,Additional 24-hour reprieve extension citing verified protocol testing expansion.
+2026-04-10,toward,3,Second successful monitored southern-route transit under joint protocol.
+2026-04-10,toward,4,168-hour attack-free period.
+2026-04-10,toward,5,Volumes still ~69% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-10,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-10,toward,7,Selective regime retention and ongoing ghost-fleet dominance.
+2026-04-10,toward,8,Houthi contingency posture unchanged.
+2026-04-10,against,1,Volumes still ~69% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-10,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-10,against,3,Selective regime retention and ongoing ghost-fleet dominance.
+2026-04-10,against,4,Houthi contingency posture unchanged.
+2026-04-11,toward,1,Eighth consecutive daily transit increase with southern routing share reaching 50%.
+2026-04-11,toward,2,Additional 24-hour reprieve extension citing third monitored transit.
+2026-04-11,toward,3,Third successful monitored southern-route transit under joint protocol.
+2026-04-11,toward,4,192-hour attack-free period.
+2026-04-11,toward,5,Volumes still ~64% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-11,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-11,toward,7,Selective regime retention.
+2026-04-11,toward,8,Houthi contingency posture unchanged.
+2026-04-11,against,1,Volumes still ~64% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-11,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-11,against,3,Selective regime retention.
+2026-04-11,against,4,Houthi contingency posture unchanged.
+2026-04-12,toward,1,Ninth consecutive daily transit increase with southern routing share reaching 55%.
+2026-04-12,toward,2,Additional 24-hour reprieve extension citing fourth monitored transit.
+2026-04-12,toward,3,Fourth successful monitored southern-route transit under joint protocol.
+2026-04-12,toward,4,216-hour attack-free period.
+2026-04-12,toward,5,Volumes still ~59% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-12,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-12,toward,7,Selective regime retention.
+2026-04-12,toward,8,Houthi contingency posture unchanged.
+2026-04-12,against,1,Volumes still ~59% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-12,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-12,against,3,Selective regime retention.
+2026-04-12,against,4,Houthi contingency posture unchanged.
+2026-04-13,toward,1,Tenth consecutive daily transit increase with southern routing share reaching 60%.
+2026-04-13,toward,2,Additional 24-hour reprieve extension citing fifth monitored transit.
+2026-04-13,toward,3,Fifth successful monitored southern-route transit under joint protocol.
+2026-04-13,toward,4,240-hour attack-free period.
+2026-04-13,toward,5,Volumes still ~54% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-13,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-13,toward,7,Selective regime retention.
+2026-04-13,toward,8,Houthi contingency posture unchanged.
+2026-04-13,against,1,Volumes still ~54% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-13,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-13,against,3,Selective regime retention.
+2026-04-13,against,4,Houthi contingency posture unchanged.
+2026-04-14,toward,1,Eleventh consecutive daily transit increase with southern routing share reaching 65%.
+2026-04-14,toward,2,Additional 24-hour reprieve extension citing sixth monitored transit.
+2026-04-14,toward,3,Sixth successful monitored southern-route transit under joint protocol.
+2026-04-14,toward,4,264-hour attack-free period.
+2026-04-14,toward,5,Volumes still ~49% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-14,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-14,toward,7,Selective regime retention.
+2026-04-14,toward,8,Houthi contingency posture unchanged.
+2026-04-14,against,1,Volumes still ~49% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-14,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-14,against,3,Selective regime retention.
+2026-04-14,against,4,Houthi contingency posture unchanged.
+2026-04-15,toward,1,Twelfth consecutive daily transit increase with southern routing share reaching 70%.
+2026-04-15,toward,2,Additional 24-hour reprieve extension citing seventh monitored transit.
+2026-04-15,toward,3,Seventh successful monitored southern-route transit under joint protocol.
+2026-04-15,toward,4,288-hour attack-free period.
+2026-04-15,toward,5,Volumes still ~44% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-15,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-15,toward,7,Selective regime retention.
+2026-04-15,toward,8,Houthi contingency posture unchanged.
+2026-04-15,against,1,Volumes still ~44% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-15,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-15,against,3,Selective regime retention.
+2026-04-15,against,4,Houthi contingency posture unchanged.
+2026-04-16,toward,1,Thirteenth consecutive daily transit increase with southern routing share reaching 75%.
+2026-04-16,toward,2,Additional 24-hour reprieve extension citing eighth monitored transit.
+2026-04-16,toward,3,Eighth successful monitored southern-route transit under joint protocol.
+2026-04-16,toward,4,312-hour attack-free period.
+2026-04-16,toward,5,Volumes still ~39% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-16,toward,6,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-16,toward,7,Selective regime retention.
+2026-04-16,toward,8,Houthi contingency posture unchanged.
+2026-04-16,against,1,Volumes still ~39% below baseline with persistent safety-driven crew/P&I suppression.
+2026-04-16,against,2,Binding 3–5 year Ras Laffan constraints and force majeure.
+2026-04-16,against,3,Selective regime retention.
+2026-04-16,against,4,Houthi contingency posture unchanged.
+2026-04-17,toward,1,Short tactical pause in attacks (24–48 hours).
+2026-04-17,toward,2,Limited ghost-fleet/approved transits continuing under blockade.
+2026-04-17,toward,3,Active US blockade enforcement (13 April onward) with interdictions.
+2026-04-17,toward,4,Transit volumes stagnant at ~15–21/day (~85% below baseline).
+2026-04-17,toward,5,Ceasefire collapse into sustained enforcement posture.
+2026-04-17,toward,6,Binding Ras Laffan constraints and force majeure.
+2026-04-17,against,1,Active US blockade enforcement (13 April onward) with interdictions.
+2026-04-17,against,2,Transit volumes stagnant at ~15–21/day (~85% below baseline).
+2026-04-17,against,3,Ceasefire collapse into sustained enforcement posture.
+2026-04-17,against,4,Binding Ras Laffan constraints and force majeure.
+2026-04-18,toward,1,Minor daily transit fluctuation (21 on 16 April) with continued Iran-linked corridor use.
+2026-04-18,toward,2,Fragile ceasefire context and Trump signaling weekend negotiations.
+2026-04-18,toward,3,96-hour attack-free period.
+2026-04-18,toward,4,Active US blockade enforcement with ongoing turn-backs.
+2026-04-18,toward,5,Transit volumes stagnant at ~85% below baseline.
+2026-04-18,toward,6,Binding Ras Laffan constraints and force majeure.
+2026-04-18,toward,7,Selective routing and fragile ceasefire status.
+2026-04-18,against,1,Active US blockade enforcement with ongoing turn-backs.
+2026-04-18,against,2,Transit volumes stagnant at ~85% below baseline.
+2026-04-18,against,3,Binding Ras Laffan constraints and force majeure.
+2026-04-18,against,4,Selective routing and fragile ceasefire status.
+2026-04-19,toward,1,Minor daily transit fluctuation (24 on 17 April) with continued Iran-linked corridor use.
+2026-04-19,toward,2,Agreement to continue talks following weekend negotiations and “constructive dialogue” signal.
+2026-04-19,toward,3,120-hour attack-free period.
+2026-04-19,toward,4,Active US blockade enforcement with ongoing turn-backs.
+2026-04-19,toward,5,Transit volumes stagnant at ~84% below baseline.
+2026-04-19,toward,6,Binding Ras Laffan constraints and force majeure.
+2026-04-19,toward,7,No immediate blockade lift from negotiations.
+2026-04-19,against,1,Active US blockade enforcement with ongoing turn-backs.
+2026-04-19,against,2,Transit volumes stagnant at ~84% below baseline.
+2026-04-19,against,3,Binding Ras Laffan constraints and force majeure.
+2026-04-19,against,4,No immediate blockade lift from negotiations.
+2026-04-20,toward,1,Scheduled Tuesday follow-on talks with explicit reference to “progress on verification mechanisms”.
+2026-04-20,toward,2,Minor daily transit fluctuation (27 on 18 April) with continued Iran-linked corridor use.
+2026-04-20,toward,3,144-hour attack-free period.
+2026-04-20,toward,4,Active US blockade enforcement with ongoing turn-backs.
+2026-04-20,toward,5,Transit volumes stagnant at ~83% below baseline.
+2026-04-20,toward,6,Binding Ras Laffan constraints and force majeure.
+2026-04-20,toward,7,No immediate blockade lift despite diplomatic scheduling.
+2026-04-20,against,1,Active US blockade enforcement with ongoing turn-backs.
+2026-04-20,against,2,Transit volumes stagnant at ~83% below baseline.
+2026-04-20,against,3,Binding Ras Laffan constraints and force majeure.
+2026-04-20,against,4,No immediate blockade lift despite diplomatic scheduling.
+2026-04-21,toward,1,Short tactical pause since 19 April interdiction.
+2026-04-21,toward,2,US seizure of *Touska* (19 April) and expanded enforcement into Gulf of Oman.
+2026-04-21,toward,3,Iran’s reimposed Hormuz closure (18 April) and 35 vessel reversals.
+2026-04-21,toward,4,Transit collapse to 3 vessels on 20 April (~97% below baseline).
+2026-04-21,toward,5,Stalled talks and Iranian rejection of second round.
+2026-04-21,toward,6,Binding Ras Laffan constraints and force majeure.
+2026-04-21,against,1,US seizure of *Touska* (19 April) and expanded enforcement into Gulf of Oman.
+2026-04-21,against,2,Iran’s reimposed Hormuz closure (18 April) and 35 vessel reversals.
+2026-04-21,against,3,Transit collapse to 3 vessels on 20 April (~97% below baseline).
+2026-04-21,against,4,Stalled talks and Iranian rejection of second round.
+2026-04-21,against,5,Binding Ras Laffan constraints and force majeure.
+2026-04-22,toward,1,Iranian “conditional compliance” statement (first since re-closure).
+2026-04-22,toward,2,72-hour attack-free period.
+2026-04-22,toward,3,Continued US turn-backs of Iranian-linked vessels (21 April).
+2026-04-22,toward,4,Transit collapse persisting at 4 vessels/day (~96% below baseline).
+2026-04-22,toward,5,Diplomatic talks stalled with no second round.
+2026-04-22,toward,6,Binding Ras Laffan constraints and force majeure.
+2026-04-22,against,1,Continued US turn-backs of Iranian-linked vessels (21 April).
+2026-04-22,against,2,Transit collapse persisting at 4 vessels/day (~96% below baseline).
+2026-04-22,against,3,Diplomatic talks stalled with no second round.
+2026-04-22,against,4,Binding Ras Laffan constraints and force majeure.
+2026-04-23,toward,1,Formal Iranian note with specific phased compliance proposal.
+2026-04-23,toward,2,Modest transit uptick to 6 vessels on 22 April and 24-hour enforcement lull.
+2026-04-23,toward,3,96-hour attack-free period.
+2026-04-23,toward,4,Transit volumes locked at ~95% below baseline.
+2026-04-23,toward,5,No US response or second-round scheduling.
+2026-04-23,toward,6,Binding Ras Laffan constraints and force majeure.
+2026-04-23,against,1,Transit volumes locked at ~95% below baseline.
+2026-04-23,against,2,No US response or second-round scheduling.
+2026-04-23,against,3,Binding Ras Laffan constraints and force majeure.
+2026-04-24,toward,1,US ceasefire extension.
+2026-04-24,toward,2,48-hour attack-free period following 22 April incidents.
+2026-04-24,toward,3,Iranian ship seizures and attacks on 22 April.
+2026-04-24,toward,4,CENTCOM-directed 31 turn-arounds and ongoing blockade.
+2026-04-24,toward,5,Transit collapse persisting at 4 vessels/day (~96% below baseline).
+2026-04-24,toward,6,Talks in limbo with Iran rejecting extension as meaningless.
+2026-04-24,toward,7,Binding Ras Laffan constraints and force majeure.
+2026-04-24,against,1,Iranian ship seizures and attacks on 22 April.
+2026-04-24,against,2,CENTCOM-directed 31 turn-arounds and ongoing blockade.
+2026-04-24,against,3,Transit collapse persisting at 4 vessels/day (~96% below baseline).
+2026-04-24,against,4,Talks in limbo with Iran rejecting extension as meaningless.
+2026-04-24,against,5,Binding Ras Laffan constraints and force majeure.
+2026-04-25,toward,1,US counter-proposal delivery and tentative 28 April meeting.
+2026-04-25,toward,2,Release of one seized vessel.
+2026-04-25,toward,3,Modest transit uptick to 8 vessels and 48-hour enforcement lull.
+2026-04-25,toward,4,72-hour attack-free period.
+2026-04-25,toward,5,Ongoing selective turn-backs and full blockade.
+2026-04-25,toward,6,Second seized vessel still held.
+2026-04-25,toward,7,Transit volumes locked at ~94% below baseline.
+2026-04-25,toward,8,Binding Ras Laffan constraints and force majeure.
+2026-04-25,against,1,Ongoing selective turn-backs and full blockade.
+2026-04-25,against,2,Second seized vessel still held.
+2026-04-25,against,3,Transit volumes locked at ~94% below baseline.
+2026-04-25,against,4,Binding Ras Laffan constraints and force majeure.
+2026-04-26,toward,1,Confirmation and scheduling of 28 April meeting under Omani facilitation.
+2026-04-26,toward,2,Release of second seized vessel.
+2026-04-26,toward,3,Continued enforcement lull and transit uptick to 11 vessels/day.
+2026-04-26,toward,4,96-hour attack-free period.
+2026-04-26,toward,5,Blockade still formally in force.
+2026-04-26,toward,6,Transit volumes locked at ~92% below baseline.
+2026-04-26,toward,7,Binding Ras Laffan constraints and force majeure.
+2026-04-26,against,1,Blockade still formally in force.
+2026-04-26,against,2,Transit volumes locked at ~92% below baseline.
+2026-04-26,against,3,Binding Ras Laffan constraints and force majeure.
+2026-04-27,toward,1,Completed agenda exchanges and confirmed 28 April meeting.
+2026-04-27,toward,2,Sustained 96-hour enforcement lull and transit uptick to 15 vessels/day.
+2026-04-27,toward,3,120-hour attack-free period.
+2026-04-27,toward,4,Blockade formally remains in force.
+2026-04-27,toward,5,Transit volumes locked at ~89% below baseline.
+2026-04-27,toward,6,Iran’s reiterated condition for verifiable US relief.
+2026-04-27,toward,7,Binding Ras Laffan constraints and force majeure.
+2026-04-27,against,1,Blockade formally remains in force.
+2026-04-27,against,2,Transit volumes locked at ~89% below baseline.
+2026-04-27,against,3,Iran’s reiterated condition for verifiable US relief.
+2026-04-27,against,4,Binding Ras Laffan constraints and force majeure.
+2026-04-28,toward,1,Preliminary understanding reached at 28 April meeting with 10-day testing period.
+2026-04-28,toward,2,Passive-only enforcement and transit uptick to 19 vessels/day.
+2026-04-28,toward,3,144-hour attack-free period.
+2026-04-28,toward,4,Blockade formally remains in force.
+2026-04-28,toward,5,Transit volumes locked at ~86% below baseline.
+2026-04-28,toward,6,Iran’s public characterization of outcome as “insufficient.”
+2026-04-28,toward,7,Binding Ras Laffan constraints and force majeure.
+2026-04-28,against,1,Blockade formally remains in force.
+2026-04-28,against,2,Transit volumes locked at ~86% below baseline.
+2026-04-28,against,3,Iran’s public characterization of outcome as “insufficient.”
+2026-04-28,against,4,Binding Ras Laffan constraints and force majeure.

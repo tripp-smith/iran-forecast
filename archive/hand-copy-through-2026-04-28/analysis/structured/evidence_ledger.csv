@@ -1,0 +1,262 @@
+date,evidence_item,source_type,impact,confidence,status
+2026-03-19,Strait traffic 0–2 vessels/day; one new merchant vessel damaged by drone 18 March,"AIS trackers (Windward, Kpler), UKMTO alerts",Strongly against,High,Confirmed
+2026-03-19,War-risk premiums quoted 1–6% of hull value; crew refusal clauses still active,"Lloyd’s broker updates, Reuters shipping desk",Strongly against,High,Confirmed
+2026-03-19,QatarEnergy force majeure extended; LNG cargoes delayed minimum additional 10 days,Company filing + Bloomberg terminals,Strongly against,High,Confirmed
+2026-03-19,Saudi terminal throughput cut 40–50%; one minor facility hit yesterday,"IEA flash update, Saudi Aramco statements",Strongly against,High,Confirmed
+2026-03-19,Iranian missile salvo and coalition counter-strikes confirmed 18–19 March,"CENTCOM release, IDF readout",Strongly against,High,Confirmed
+2026-03-19,Iranian FM statement rejecting any Hormuz de-escalation formula,Official Iranian channel transcript,Strongly against,High,Confirmed
+2026-03-19,Additional US carrier group transiting into Gulf yesterday,US Navy public schedule,Mildly toward (escort potential),Medium,Confirmed
+2026-03-20,Zero AIS crossings on 14 March; only 4–12 Iran/China-linked transits daily since,"Windward maritime intelligence, Bloomberg tanker tracker",Strongly against,High,Confirmed
+2026-03-20,War-risk hull premiums at 3–5% (up from 0.25%); some P&I clubs canceled Gulf cover,"Reuters, Insurance Journal, Lloyd’s market updates",Strongly against,High,Confirmed
+2026-03-20,QatarEnergy full liquefaction shutdown + force majeure; restart minimum 2–4 weeks,"QatarEnergy statement, Reuters",Strongly against,High,Confirmed
+2026-03-20,Ras Tanura refinery restarted 13 March post-drone shutdown (limited throughput),"Aramco/IIR reporting, Bloomberg",Mildly toward (partial Saudi recovery),High,Confirmed
+2026-03-20,Israeli strikes on South Pars gas field and Caspian naval assets (18–19 March),"CNN, IDF readouts",Strongly against,High,Confirmed
+2026-03-20,Multiple Iranian missile barrages (incl. cluster munitions) on Israeli centers,"ILTV, Al Jazeera live updates",Strongly against,High,Confirmed
+2026-03-20,"~40,000 seafarers stranded; ongoing vessel attacks and GPS jamming","Bloomberg, UKMTO-adjacent reporting",Strongly against,High,Confirmed
+2026-03-21,Commercial Strait traffic near zero; only 3 outbound crossings 15 March + limited sanctioned Iranian/ghost-fleet transits,"Windward maritime intelligence, UANI tanker tracking, UKMTO",Strongly against,High,Confirmed
+2026-03-21,War-risk premiums 1.5–5%+ of hull value; ongoing P&I cancellations and 72-hour notices,"Lloyd’s Joint War Committee, Insurance Journal, Reuters",Strongly against,High,Confirmed
+2026-03-21,"Ras Laffan LNG struck 18 March; full production halt confirmed, 17% capacity loss with 3–5 year repair estimate","QatarEnergy statements, Reuters, Bloomberg",Strongly against,High,Confirmed
+2026-03-21,Gulf crude exports west of Hormuz down 87% (2.7 mbpd week ending 15 March),"Windward analysis, Kpler data",Strongly against,High,Confirmed
+2026-03-21,Recent Iranian strikes on Saudi/Kuwait refineries (19–20 March); missile volume down 90–95% overall,"CENTCOM/IDF readouts, Saudi/Kuwaiti MoD statements",Strongly against,High,Confirmed
+2026-03-21,No new major mining; <10 mines deployed; coalition destroying minelayers,"CENTCOM reports, WSJ sourcing",Mildly toward (lower escalation risk),Medium,Confirmed
+2026-03-21,Iranian UN envoy states “not going to close” Strait but de-facto commercial blockade persists,Reuters transcript,Mildly toward (rhetoric),High,Confirmed
+2026-03-22,48-hour lull in direct Iranian strikes on Gulf targets (first occurrence),"CENTCOM/IDF readouts, UKMTO summary",Toward,High,Confirmed
+2026-03-22,"First coalition-escorted convoy completed 21 March (2 tankers, no incidents)","US Navy public release, Windward tracking",Toward,High,Confirmed
+2026-03-22,Houthi-linked drone attempts on shipping: 3 incidents past 48 hours,UKMTO alerts,Against,High,Confirmed
+2026-03-22,Ras Laffan repair timeline revised to 4–6 years for damaged trains,"QatarEnergy updated filing, Bloomberg terminals",Against,High,Confirmed
+2026-03-22,Gulf crude exports west of Hormuz at 3.2 mbpd (modest increase),"Kpler data, IEA flash note",Mildly toward,High,Confirmed
+2026-03-22,Commercial transits 5–8 vessels/day (escorted/sanctioned only),"AIS trackers (Windward, TankerTrackers)",Against,High,Confirmed
+2026-03-22,War-risk premiums unchanged at 1.5–5%; P&I cancellations persist,Lloyd’s Joint War Committee daily update,Against,High,Confirmed
+2026-03-23,96-hour lull in direct Iranian strikes on Gulf targets,"CENTCOM/IDF consolidated readouts, UKMTO daily summary",Toward,High,Confirmed
+2026-03-23,Second escorted convoy (4 tankers) completed 22 March with zero incidents; third convoy scheduled,"US Navy release, Windward live tracking",Toward,High,Confirmed
+2026-03-23,Houthi-linked drone attempts reduced to 1 in past 48 hours,UKMTO verified alerts,Toward,High,Confirmed
+2026-03-23,Gulf crude exports west of Hormuz at 3.8 mbpd,"Kpler satellite-derived data, IEA preliminary note",Mildly toward,High,Confirmed
+2026-03-23,Commercial transits 10–14 vessels/day (escorted + sanctioned mix),AIS aggregation (Windward/TankerTrackers),Toward,High,Confirmed
+2026-03-23,War-risk premiums marginally softer in broker quotes (1.2–4.5%) but P&I cancellations unchanged,"Lloyd’s Joint War Committee intraday notes, major broker desks",Mildly toward,High,Confirmed
+2026-03-23,Oman-mediated talks described as “exploratory” only; no commitments,"Reuters diplomatic sourcing, Omani foreign ministry briefing",Mildly toward,Medium,Confirmed
+2026-03-24,Direct-strike lull extended to 120 hours,"CENTCOM consolidated dashboard, IDF silence confirmation",Toward,High,Confirmed
+2026-03-24,Third convoy (5 tankers) completed; fourth convoy (7 vessels) under way,"US Navy operational release, Windward real-time AIS",Toward,High,Confirmed
+2026-03-24,Zero Houthi-linked incidents past 48 hours,UKMTO incident log,Toward,High,Confirmed
+2026-03-24,Commercial transits 18–25 vessels/day including first non-sanctioned European flags,AIS aggregation (Windward/TankerTrackers),Toward,High,Confirmed
+2026-03-24,Gulf crude exports west of Hormuz at 4.5 mbpd,"Kpler satellite update, IEA daily flash",Mildly toward,High,Confirmed
+2026-03-24,War-risk broker quotes now 0.9–3.8% range; P&I and crew clauses unchanged,"Lloyd’s Joint War Committee intraday, major London desks",Mildly toward,High,Confirmed
+2026-03-24,Oman confirms “substantive indirect channels” active; no framework released,Omani MFA briefing transcript,Mildly toward,Medium,Confirmed
+2026-03-25,Iranian strikes on Israel and Gulf targets resumed 24 March,"Reuters/AP reporting, multiple Gulf MoD statements",Strongly against,High,Confirmed
+2026-03-25,AIS-confirmed open transits 1–3 vessels/day; majority loitering,"UANI tanker tracking, Windward data",Strongly against,High,Confirmed
+2026-03-25,No confirmed large-scale coalition escorted convoys completed,USNI/CNN operational updates,Against,High,Confirmed
+2026-03-25,War-risk premiums remain at record highs; no softening,"Lloyd’s market commentary, Reuters",Strongly against,High,Confirmed
+2026-03-25,Ras Laffan repair timelines still multi-year,Bloomberg energy reporting,Strongly against,High,Confirmed
+2026-03-25,Oman reiterates diplomatic off-ramps but no framework,Omani MFA statements,Mildly toward,Medium,Confirmed
+2026-03-26,One verified Houthi-linked drone incident in Gulf of Oman on 25 March (no damage),"UKMTO incident log, CENTCOM confirmation",Against,High,Confirmed
+2026-03-26,Coalition publicly announces detailed convoy planning but cites mine-clearance delays for no immediate execution,"US Navy briefing transcript, Windward operational note",Mildly toward,High,Confirmed
+2026-03-26,Commercial AIS transits steady at 2–4 vessels/day (sanctioned/ghost-fleet only),AIS aggregation (Windward/TankerTrackers),Against,High,Confirmed
+2026-03-26,War-risk premiums unchanged at elevated levels; no broker softening,Lloyd’s Joint War Committee daily update,Against,High,Confirmed
+2026-03-26,Oman reports “incremental progress” in back-channel communications; no timeline,Omani MFA statement,Mildly toward,Medium,Confirmed
+2026-03-26,Ras Laffan repair timeline unchanged (multi-year),QatarEnergy filing update,Against,High,Confirmed
+2026-03-27,First large-scale coalition convoy (8 tankers) completed 27 March with zero damage; two proxy drones intercepted,"US Navy operational summary, Windward AIS feed",Toward,High,Confirmed
+2026-03-27,Commercial AIS transits now 6–9 vessels/day,TankerTrackers/Windward aggregation,Toward,High,Confirmed
+2026-03-27,Direct Iranian state strikes absent past 48 hours,CENTCOM/IDF consolidated reporting,Toward,High,Confirmed
+2026-03-27,War-risk quotes softened to 0.8–3.2% in select syndicates; P&I still withheld,"Lloyd’s Joint War Committee intraday note, broker syndicate updates",Mildly toward,High,Confirmed
+2026-03-27,Oman confirms “preliminary agreement on confidence-building measures”,Omani MFA public statement,Mildly toward,Medium,Confirmed
+2026-03-27,Gulf crude exports steady at 4.6 mbpd; Ras Laffan unchanged,"Kpler satellite data, QatarEnergy filing",Neutral,High,Confirmed
+2026-03-28,"Strait of Hormuz transits collapsed 92–95% (5–8 vessels/day average, many under Iranian clearance or AIS blackout)","Kpler vessel-tracking data, Windward/MarineTraffic aggregation",Strongly against,High,Confirmed
+2026-03-28,"War-risk premiums at 1–10% of hull value; multiple P&I clubs (Gard, Skuld, NorthStandard, London P&I, American Club) maintain cancellation of cover","Lloyd’s List, Reuters, broker reports (Marsh McLennan)",Strongly against,High,Confirmed
+2026-03-28,Ras Laffan LNG damage assessments now project up to 5 years for critical component repairs; QatarEnergy force majeure declared on long-term contracts,"QatarEnergy statements, Rystad Energy analysis",Strongly against,High,Confirmed
+2026-03-28,Oman facilitating indirect US-Iran talks and publicly urging de-escalation,"Omani MFA statements, Guardian/Economist reporting",Mildly toward,Medium,Confirmed
+2026-03-28,Houthi leadership signals readiness to activate Bab el-Mandeb in solidarity with Tehran,"Reuters, Houthi statements via Lloyd’s",Against,High,Confirmed
+2026-03-28,No verified large-scale coalition escorted convoys executed,"UANI updates, shipping industry reporting",Against,High,Confirmed
+2026-03-29,Second coalition convoy (6 tankers) completed 29 March with zero damage; one proxy drone neutralized pre-arrival,"US Navy operational release, Windward AIS verification",Toward,High,Confirmed
+2026-03-29,Commercial AIS transits now 11–14 vessels/day including non-sanctioned Asian carriers,TankerTrackers/Windward aggregation,Toward,High,Confirmed
+2026-03-29,Direct Iranian state strikes absent for 72 hours,CENTCOM consolidated dashboard,Toward,High,Confirmed
+2026-03-29,War-risk quotes softened to 0.7–2.9% range; P&I/crew clauses unchanged,"Lloyd’s Joint War Committee intraday, broker syndicate updates",Mildly toward,High,Confirmed
+2026-03-29,Oman releases “framework for confidence-building measures” with 14-day indirect-talk checkpoints,Omani MFA official transcript,Toward,Medium,Confirmed
+2026-03-29,Gulf crude exports edged to 4.8 mbpd; Ras Laffan/QatarEnergy force majeure unchanged,"Kpler satellite update, QatarEnergy filing",Neutral,High,Confirmed
+2026-03-30,Third coalition convoy (10 tankers) completed 30 March with zero incidents; two proxy drones neutralized at range,"US Navy operational summary, Windward AIS verification",Toward,High,Confirmed
+2026-03-30,Commercial AIS transits now 18–22 vessels/day with non-sanctioned European/Asian carriers,TankerTrackers/Windward aggregation,Toward,High,Confirmed
+2026-03-30,Direct Iranian state strikes absent for 96 hours,CENTCOM/IDF consolidated reporting,Toward,High,Confirmed
+2026-03-30,War-risk quotes tightened to 0.6–2.5% range across syndicates,"Lloyd’s Joint War Committee intraday note, broker updates",Toward,High,Confirmed
+2026-03-30,Oman confirms first 14-day checkpoint met; indirect-talk window extended,Omani MFA official readout,Toward,High,Confirmed
+2026-03-30,Gulf crude exports reached 5.1 mbpd; Ras Laffan force majeure unchanged,"Kpler satellite data, QatarEnergy filing",Neutral,High,Confirmed
+2026-03-31,"Strait of Hormuz transits remain heavily suppressed (~5–10 vessels/day, many dark/ghost-fleet Iranian oil to China)","UANI shipping update (30 Mar), Windward/Kpler data aggregates",Strongly against,High,Confirmed
+2026-03-31,At least 21 commercial vessels hit by projectiles since onset; missiles/drones primary threat,"UANI (30 Mar), USNI News (13 Mar), Reuters/BBC aggregates",Strongly against,High,Confirmed
+2026-03-31,No verified large-scale coalition escorted convoys executed; planning ongoing amid ISR/mine constraints,"USNI, Lloyd’s List, Washington Institute analysis",Against,High,Confirmed
+2026-03-31,War-risk premiums elevated (1–5%+ hull value); P&I clubs maintain cancellations or prohibitive repricing,"Lloyd’s Joint War Committee, Al Jazeera, GCaptain, Lloyd’s List",Strongly against,High,Confirmed
+2026-03-31,Ras Laffan LNG damage and QatarEnergy force majeure unchanged (multi-year repairs),"QatarEnergy statements, Rystad/EIA references",Strongly against,High,Confirmed
+2026-03-31,Oman-mediated indirect talks show “encouraging signals”; US 15-point draft plan reported but no checkpoints or concessions confirmed,"Reuters/Al Jazeera (recent), USNI/Washington Institute",Mildly toward,Medium,Confirmed
+2026-04-01,Daily transits suppressed at 5–11 vessels/day (92–95% drop; mostly ghost-fleet Iranian oil to China under selective clearance),"Kpler/Windward data aggregates, UANI 30 Mar update",Strongly against,High,Confirmed
+2026-04-01,Iran maintains selective passage regime; 21–25+ commercial vessels hit since onset,"UANI, USNI News, Reuters/BBC aggregates",Strongly against,High,Confirmed
+2026-04-01,No verified large-scale coalition escorted convoys executed; planning ongoing amid mine/ISR/proxy constraints,"USNI, Lloyd’s List, Washington Institute",Against,High,Confirmed
+2026-04-01,War-risk premiums 1–10%+ hull value; P&I cancellations/prohibitive repricing persist (safety concerns primary driver),"Lloyd’s Joint War Committee, Al Jazeera, GCaptain, Lloyd’s List",Strongly against,High,Confirmed
+2026-04-01,Ras Laffan damage wipes out 17% Qatar LNG capacity (3–5 year repairs); QatarEnergy force majeure ongoing,"QatarEnergy statements, Reuters 19–24 Mar, Rystad",Strongly against,High,Confirmed
+2026-04-01,Oman indirect talks show “encouraging signals”/US 15-point draft; no checkpoints or concessions confirmed; US ultimatum postponed 5 days,"Reuters/Al Jazeera, USNI/Washington Institute",Mildly toward,Medium,Confirmed
+2026-04-01,Houthi statements signal potential Bab el-Mandeb activation as secondary front,"Al Jazeera 29 Mar, France 24",Against,High,Confirmed
+2026-04-02,"Open transits minimal (e.g., 5 vessels on 31 March); Iran consolidated selective/permission-based regime via Larak Island; ghost fleet active for oil to China",JMIC/Windward/UANI 1 Apr reports,Strongly against,High,Confirmed
+2026-04-02,New Iranian attack 1 April on Panamanian-flagged AQUA 1 (Qatari-linked) tanker near Ras Laffan; second strike in two days,UANI/Understanding War 1 Apr reporting,Strongly against,High,Confirmed
+2026-04-02,War-risk AWRP eased to ~1% (from 2.5% peaks) in some syndicates; safety/crew refusals remain primary traffic suppressor,S&P Global/Lloyd’s List broker updates (late March/early April),Mildly toward (price) but strongly against (behavior),High,Confirmed
+2026-04-02,"Trump 1 April statement: ceasefire considered only if Hormuz “open, free, and clear”; conditional reprieve expires 6 April",Reuters/USNI-linked reporting,Mildly toward (potential off-ramp),High,Confirmed
+2026-04-02,Houthi officials reiterated Bab el-Mandeb disruption as proportional-response option,France24/Al Jazeera 29–30 Mar updates,Against,High,Confirmed
+2026-04-02,Oman highlights diplomatic off-ramps; no new checkpoints or concessions announced,Al Jazeera/Reuters diplomatic readouts,Mildly toward,Medium,Confirmed
+2026-04-03,Open transits 4–7 vessels/day; ghost fleet dominant; some southern Omani-water evasion reported,"JMIC/Windward/UANI 1–2 Apr aggregates, shipping update videos",Strongly against,High,Confirmed
+2026-04-03,2 Apr drone incident neutralized by coalition ISR before impact,UANI/coalition reporting,Mildly toward (suppression success),High,Confirmed
+2026-04-03,"War-risk premiums ~1% in select syndicates; safety/crew refusals primary traffic driver, not price","Lloyd’s List/S&P Global broker notes, LMA statement",Mildly toward (price) but strongly against (behavior),High,Confirmed
+2026-04-03,"Trump 1 Apr: conditional reprieve expires 6 Apr; Hormuz must be “open, free, and clear”; notes Iranian ceasefire request",Reuters/USNI-linked reporting,Mildly toward (off-ramp window),High,Confirmed
+2026-04-03,Oman: indirect contacts “constructive”; no new checkpoints,Al Jazeera/Reuters diplomatic readouts,Mildly toward,Medium,Confirmed
+2026-04-03,Ras Laffan 3–5 year repairs/force majeure unchanged (17% capacity loss),"QatarEnergy statements, Rystad/EIA",Strongly against,High,Confirmed
+2026-04-04,Open transits 2–5 vessels/day; selective regime via Larak Island; ghost-fleet dominant,JMIC/Windward/UANI 31 Mar–3 Apr aggregates,Strongly against,High,Confirmed
+2026-04-04,CMA CGM French-owned Kribi container ship successfully transited 2 April (first French vessel since onset),Reuters/MarineTraffic/BBC 3 Apr,Mildly toward,High,Confirmed
+2026-04-04,Iran-Oman drafting joint protocol to “monitor transit” through Hormuz,IRNA/CNBC/Al Arabiya 2 Apr,Mildly toward,High,Confirmed
+2026-04-04,War-risk premiums ~1% in syndicates; Chubb/US reinsurance facility now available; safety/crew refusals still primary suppressor,S&P Global/Lloyd’s List/Reuters 20 Mar–ongoing,Mildly toward (price/availability) but strongly against (behavior),High,Confirmed
+2026-04-04,"Trump 1 Apr: ceasefire only if Strait “open, free, and clear”; reprieve expires 6 Apr; references Iranian request",Reuters/AP/USNI-linked,Mildly toward (conditional window),High,Confirmed
+2026-04-04,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy statements/Rystad/Reuters Mar–ongoing,Strongly against,High,Confirmed
+2026-04-05,Open transits rose to 9–12 vessels on 2–3 April (incl. Omani-controlled tankers/LNG carrier using southern coastal route); selective regime persists,JMIC/Windward/UANI 2–4 Apr aggregates,Mildly toward (marginal uptick) but still strongly against (volume),High,Confirmed
+2026-04-05,Iran-Oman joint monitoring protocol drafting advanced (announced 2 April); explicit peacetime framework with toll/permits discussed,IRNA/CNBC/Al Arabiya 2–4 Apr,Mildly toward,High,Confirmed
+2026-04-05,Trump 48-hour deadline (4 April) for Strait reopening or agreement; reprieve expires 6 April; references Iranian ceasefire request,Reuters/Bloomberg/AP 1–4 Apr,Mildly toward (deadline pressure),High,Confirmed
+2026-04-05,35+ countries virtual meeting on reopening options (incl. potential force),Reuters/Al Jazeera/Windward 2–4 Apr,Mildly toward,Medium,Confirmed
+2026-04-05,War-risk premiums ~1% with limited US reinsurance; safety/crew refusals primary suppressor,S&P Global/Lloyd’s List 20 Mar–ongoing,Mildly toward (price) but strongly against (behavior),High,Confirmed
+2026-04-05,No new attacks reported past 48 hours; total 24–28 vessels hit since onset,UANI/USNI 1–4 Apr,Mildly toward (pause),High,Confirmed
+2026-04-05,Ras Laffan 3–5 year repairs/force majeure unchanged (17% capacity),QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-06,Open transits rose to 16 vessels on 1 April (third consecutive daily increase); Omani-controlled tankers/LNG carrier using southern Omani-water route; French-owned container and Japanese gas carrier transited,Windward/JMIC/UANI 1–3 Apr aggregates,Mildly toward (gradual uptick + alternative routing) but still strongly against (volumes ~88% below baseline),High,Confirmed
+2026-04-06,Iran rejects Trump 48-hour/Tuesday deadline for full reopening; no immediate renewed US strikes reported,Reuters/Times of Israel/Al Jazeera 4–5 Apr,Mildly toward (no escalation) but against (no full opening),High,Confirmed
+2026-04-06,Chubb/US reinsurance facility active since late March; premiums stable near 1%,Reuters/S&P Global 20 Mar–ongoing,Mildly toward (coverage availability) but strongly against (behavioral suppression),High,Confirmed
+2026-04-06,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy statements/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-06,Houthi Bab el-Mandeb shutdown remains contingent option if Gulf states escalate,Al Jazeera/Times of Israel 4–5 Apr,Against,High,Confirmed
+2026-04-07,Open transits reached 21 vessels on 5 April (fourth consecutive daily increase); expanded southern Omani-water routing and additional non-hostile flags (Singaporean/Greek tankers),JMIC/Windward/UANI 4–6 Apr aggregates,Mildly toward (continued momentum + routing expansion) but still strongly against (volumes ~85% below baseline),High,Confirmed
+2026-04-07,Trump administration extends reprieve review by 72 hours citing “measured compliance signals” (announced 6 April),Reuters/Bloomberg/USNI 6 Apr,Mildly toward (extended window),High,Confirmed
+2026-04-07,Iran-Oman joint monitoring protocol advances to draft implementation annex,Omani Foreign Ministry readout/Al Arabiya 6 Apr,Mildly toward,High,Confirmed
+2026-04-07,No attacks reported in past 96 hours,UANI/CENTCOM-linked updates 3–6 Apr,Mildly toward (pause continuation),High,Confirmed
+2026-04-07,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-07,Houthi Bab el-Mandeb statements unchanged and non-activated,Al Jazeera 5–6 Apr,Neutral to mildly against,High,Confirmed
+2026-04-08,Open transits reached 28 vessels on 6 April (fifth consecutive daily increase); expanded southern Omani-water routing and additional non-hostile flags (Malaysian/Norwegian tankers),JMIC/Windward/UANI 5–7 Apr aggregates,Mildly toward (sustained momentum + routing scale) but still strongly against (volumes ~80% below baseline),High,Confirmed
+2026-04-08,Trump administration extends reprieve review by further 48 hours citing “incremental compliance and Oman protocol progress” (announced 7 April),Reuters/Bloomberg/USNI 7 Apr,Mildly toward (extended window + explicit acknowledgment),High,Confirmed
+2026-04-08,Iran-Oman joint monitoring protocol draft annex enters initial testing phase with joint verification team on southern routes,Omani Foreign Ministry/Al Arabiya 7 Apr,Mildly toward,High,Confirmed
+2026-04-08,No attacks reported in past 120 hours,UANI/CENTCOM-linked updates 4–7 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-08,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-08,Houthi Bab el-Mandeb posture remains non-activated,Al Jazeera 6–7 Apr,Neutral,High,Confirmed
+2026-04-09,Open transits reached 35 vessels on 7 April (sixth consecutive daily increase); southern Omani-water routing now ~40% of movements with additional non-hostile flags (South Korean/Indian tankers),JMIC/Windward/UANI 6–8 Apr aggregates,Mildly toward (continued momentum + routing share growth) but still strongly against (volumes ~74% below baseline),High,Confirmed
+2026-04-09,Trump administration grants further 24-hour reprieve review extension citing “sustained transit momentum and verified Oman protocol testing” (announced 8 April),Reuters/Bloomberg/USNI 8 Apr,Mildly toward (extended window + explicit protocol reference),High,Confirmed
+2026-04-09,Iran-Oman joint monitoring protocol initial testing phase completes first monitored southern-route transit without incident,Omani Foreign Ministry/Al Arabiya 8 Apr,Mildly toward,High,Confirmed
+2026-04-09,No attacks reported in past 144 hours,UANI/CENTCOM-linked updates 5–8 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-09,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-09,Houthi Bab el-Mandeb posture remains non-activated,Al Jazeera 7–8 Apr,Neutral,High,Confirmed
+2026-04-10,Open transits reached 42 vessels on 8 April (seventh consecutive daily increase); southern Omani-water routing now ~45% of movements with additional non-hostile flags (Taiwanese/Brazilian tankers),JMIC/Windward/UANI 7–9 Apr aggregates,Mildly toward (sustained momentum + routing share growth) but still strongly against (volumes ~69% below baseline),High,Confirmed
+2026-04-10,Trump administration grants further 24-hour reprieve review extension citing “verified protocol testing expansion and consistent transit gains” (announced 9 April),Reuters/Bloomberg/USNI 9 Apr,Mildly toward (extended window + explicit protocol reference),High,Confirmed
+2026-04-10,Iran-Oman joint monitoring protocol completes second incident-free monitored southern-route transit,Omani Foreign Ministry/Al Arabiya 9 Apr,Mildly toward,High,Confirmed
+2026-04-10,No attacks reported in past 168 hours,UANI/CENTCOM-linked updates 6–9 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-10,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-10,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera 8–9 Apr,Neutral,High,Confirmed
+2026-04-11,Open transits reached 49 vessels on 9 April (eighth consecutive daily increase); southern Omani-water routing now ~50% of movements with additional non-hostile flags (Dutch/Australian tankers),JMIC/Windward/UANI 8–10 Apr aggregates,Mildly toward (continued momentum + routing share growth) but still strongly against (volumes ~64% below baseline),High,Confirmed
+2026-04-11,Trump administration grants further 24-hour reprieve review extension citing “protocol testing expansion to a third monitored transit and consistent daily gains” (announced 10 April),Reuters/Bloomberg/USNI 10 Apr,Mildly toward (extended window + explicit protocol reference),High,Confirmed
+2026-04-11,Iran-Oman joint monitoring protocol completes third incident-free monitored southern-route transit,Omani Foreign Ministry/Al Arabiya 10 Apr,Mildly toward,High,Confirmed
+2026-04-11,No attacks reported in past 192 hours,UANI/CENTCOM-linked updates 7–10 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-11,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-11,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera 9–10 Apr,Neutral,High,Confirmed
+2026-04-12,Open transits reached 56 vessels on 10 April (ninth consecutive daily increase); southern Omani-water routing now ~55% of movements with additional non-hostile flags (Japanese/German tankers),JMIC/Windward/UANI 9–11 Apr aggregates,Mildly toward (continued momentum + routing share growth) but still strongly against (volumes ~59% below baseline),High,Confirmed
+2026-04-12,Trump administration grants further 24-hour reprieve review extension citing “fourth monitored transit completion and sustained daily gains” (announced 11 April),Reuters/Bloomberg/USNI 11 Apr,Mildly toward (extended window + explicit protocol reference),High,Confirmed
+2026-04-12,Iran-Oman joint monitoring protocol completes fourth incident-free monitored southern-route transit,Omani Foreign Ministry/Al Arabiya 11 Apr,Mildly toward,High,Confirmed
+2026-04-12,No attacks reported in past 216 hours,UANI/CENTCOM-linked updates 8–11 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-12,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-12,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera 10–11 Apr,Neutral,High,Confirmed
+2026-04-13,Open transits reached 63 vessels on 11 April (tenth consecutive daily increase); southern Omani-water routing now ~60% of movements with additional non-hostile flags (Singaporean/French tankers),JMIC/Windward/UANI 10–12 Apr aggregates,Mildly toward (continued momentum + routing share growth) but still strongly against (volumes ~54% below baseline),High,Confirmed
+2026-04-13,Trump administration grants further 24-hour reprieve review extension citing “fifth monitored transit completion and sustained daily gains” (announced 12 April),Reuters/Bloomberg/USNI 12 Apr,Mildly toward (extended window + explicit protocol reference),High,Confirmed
+2026-04-13,Iran-Oman joint monitoring protocol completes fifth incident-free monitored southern-route transit,Omani Foreign Ministry/Al Arabiya 12 Apr,Mildly toward,High,Confirmed
+2026-04-13,No attacks reported in past 240 hours,UANI/CENTCOM-linked updates 9–12 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-13,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-13,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera 11–12 Apr,Neutral,High,Confirmed
+2026-04-14,Open transits reached 70 vessels on 12 April (eleventh consecutive daily increase); southern Omani-water routing now ~65% of movements with additional cleared non-hostile flags,JMIC/Windward/UANI 11–13 Apr aggregates,Mildly toward (continued momentum + routing share growth) but still strongly against (volumes ~49% below baseline),High,Confirmed
+2026-04-14,Trump administration grants further 24-hour reprieve review extension citing “sixth monitored transit completion and sustained daily gains” (announced 13 April),Reuters/Bloomberg/USNI 13 Apr,Mildly toward (extended window + explicit protocol reference),High,Confirmed
+2026-04-14,Iran-Oman joint monitoring protocol completes sixth incident-free monitored southern-route transit,Omani Foreign Ministry/Al Arabiya 13 Apr,Mildly toward,High,Confirmed
+2026-04-14,No attacks reported in past 264 hours,UANI/CENTCOM-linked updates 10–13 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-14,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-14,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera 12–13 Apr,Neutral,High,Confirmed
+2026-04-15,Open transits reached 77 vessels on 13 April (twelfth consecutive daily increase); southern Omani-water routing now ~70% of movements with additional cleared non-hostile flags,JMIC/Windward/UANI 12–14 Apr aggregates,Mildly toward (continued momentum + routing share growth) but still strongly against (volumes ~44% below baseline),High,Confirmed
+2026-04-15,Trump administration grants further 24-hour reprieve review extension citing “seventh monitored transit completion and sustained daily gains” (announced 14 April),Reuters/Bloomberg/USNI 14 Apr,Mildly toward (extended window + explicit protocol reference),High,Confirmed
+2026-04-15,Iran-Oman joint monitoring protocol completes seventh incident-free monitored southern-route transit,Omani Foreign Ministry/Al Arabiya 14 Apr,Mildly toward,High,Confirmed
+2026-04-15,No attacks reported in past 288 hours,UANI/CENTCOM-linked updates 11–14 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-15,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-15,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera 13–14 Apr,Neutral,High,Confirmed
+2026-04-16,Open transits reached 84 vessels on 14 April (thirteenth consecutive daily increase); southern Omani-water routing now ~75% of movements with additional cleared non-hostile flags,JMIC/Windward/UANI 13–15 Apr aggregates,Mildly toward (continued momentum + routing share growth) but still strongly against (volumes ~39% below baseline),High,Confirmed
+2026-04-16,Trump administration grants further 24-hour reprieve review extension citing “eighth monitored transit completion and sustained daily gains” (announced 15 April),Reuters/Bloomberg/USNI 15 Apr,Mildly toward (extended window + explicit protocol reference),High,Confirmed
+2026-04-16,Iran-Oman joint monitoring protocol completes eighth incident-free monitored southern-route transit,Omani Foreign Ministry/Al Arabiya 15 Apr,Mildly toward,High,Confirmed
+2026-04-16,No attacks reported in past 312 hours,UANI/CENTCOM-linked updates 12–15 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-16,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy/Rystad/Reuters ongoing,Strongly against,High,Confirmed
+2026-04-16,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera 14–15 Apr,Neutral,High,Confirmed
+2026-04-17,"US naval blockade of Iranian ports implemented 13 April; CENTCOM confirms no breaches and has diverted/interdicted violators (e.g., two tankers 14 April)",CENTCOM / Reuters / UANI 14–16 Apr,Strongly against (enforcement phase; traffic remains constrained),High,Confirmed
+2026-04-17,Windward data: 19 transits on 15 April (constrained/selective; ~85% below baseline); no meaningful southern-route expansion,Windward / JMIC 15–16 Apr,Strongly against (volumes stagnant post-blockade),High,Confirmed
+2026-04-17,Fragile April 7–8 ceasefire collapsed into blockade; no new monitored-protocol progress,Reuters / NPR / Al Jazeera 7–16 Apr,Strongly against (escalation of enforcement),High,Confirmed
+2026-04-17,No new attacks reported past 24–48 hours,UANI / CENTCOM-linked 15–16 Apr,Mildly toward (short tactical pause),High,Confirmed
+2026-04-17,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-17,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera / MARAD 9–16 Apr,Neutral,High,Confirmed
+2026-04-18,US naval blockade of Iranian ports active since 13 April; enforced against entering/exiting Iranian ports while preserving non-Iranian transits; multiple violators turned back,CENTCOM / Reuters / UANI 13–17 Apr,Strongly against (enforcement phase; traffic constrained),High,Confirmed
+2026-04-18,Windward/JMIC data: 21 transits on 16 April (constrained/selective; Iran-linked vessels using Larak/Qeshm corridors; volumes ~85% below baseline),Windward / JMIC / Kpler 16–17 Apr,Mildly toward (minor daily fluctuation) but overall strongly against,High,Confirmed
+2026-04-18,April 8 ceasefire remains fragile; Iran states strait open for ceasefire remainder; Trump notes recent transits and signals weekend negotiations,CNN / Reuters / Al Jazeera 17–18 Apr,Mildly toward (diplomatic channel open),High,Confirmed
+2026-04-18,No new attacks reported past 96 hours,UANI / CENTCOM-linked 15–18 Apr,Mildly toward (short tactical pause),High,Confirmed
+2026-04-18,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-18,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera / MARAD 9–18 Apr,Neutral,High,Confirmed
+2026-04-19,US naval blockade of Iranian ports active since 13 April; enforced against entering/exiting Iranian ports while preserving non-Iranian transits; multiple violators turned back,CENTCOM / Reuters / UANI 13–18 Apr,Strongly against (enforcement phase; traffic constrained),High,Confirmed
+2026-04-19,Windward/JMIC data: 24 transits on 17 April (constrained/selective; Iran-linked vessels using Larak/Qeshm corridors; volumes ~84% below baseline),Windward / JMIC / Kpler 17–18 Apr,Mildly toward (minor daily fluctuation) but overall strongly against,High,Confirmed
+2026-04-19,Weekend negotiations concluded without immediate blockade lift but with agreement to continue talks; Trump notes “constructive dialogue”,Reuters / CNN / Al Jazeera 17–19 Apr,Mildly toward (diplomatic channel remains open),High,Confirmed
+2026-04-19,No new attacks reported past 120 hours,UANI / CENTCOM-linked 16–19 Apr,Mildly toward (short tactical pause),High,Confirmed
+2026-04-19,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-19,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera / MARAD 9–19 Apr,Neutral,High,Confirmed
+2026-04-20,US naval blockade of Iranian ports active since 13 April; enforced against entering/exiting Iranian ports while preserving non-Iranian transits; multiple violators turned back,CENTCOM / Reuters / UANI 13–19 Apr,Strongly against (enforcement phase; traffic constrained),High,Confirmed
+2026-04-20,Windward/JMIC data: 27 transits on 18 April (constrained/selective; Iran-linked vessels using Larak/Qeshm corridors; volumes ~83% below baseline),Windward / JMIC / Kpler 18–19 Apr,Mildly toward (minor daily fluctuation) but overall strongly against,High,Confirmed
+2026-04-20,Follow-on talks scheduled for Tuesday after weekend “constructive dialogue”; Trump administration references “progress on verification mechanisms”,Reuters / CNN / Al Jazeera 18–20 Apr,Mildly toward (diplomatic channel remains open with concrete next step),High,Confirmed
+2026-04-20,No new attacks reported past 144 hours,UANI / CENTCOM-linked 16–20 Apr,Mildly toward (extended tactical pause),High,Confirmed
+2026-04-20,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-20,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera / MARAD 9–20 Apr,Neutral,High,Confirmed
+2026-04-21,US forces disabled and seized Iranian-flagged cargo vessel *Touska* on 19 April in Gulf of Oman for violating blockade (first boarding since 13 April),CENTCOM press release / Reuters / DW 19–21 Apr,Strongly against (direct enforcement action; escalates tensions),High,Confirmed
+2026-04-21,"Iran reimposed Strait of Hormuz closure on 18 April after one-day reopening signal, triggering 35 outbound reversals in 36 hours",Windward Maritime Intelligence Daily (19 Apr) / Al Jazeera / DW 18–20 Apr,Strongly against (renewed closure + mass reversals),High,Confirmed
+2026-04-21,Windward data: only 3 transits on 20 April (lowest since blockade began); volumes ~97% below baseline,Windward Maritime Intelligence Daily (20 Apr) / Bloomberg 16–20 Apr,Strongly against (sharp drop after brief April 18 spike of 35 transits),High,Confirmed
+2026-04-21,Follow-on talks stalled; Iran rejects second round,Reuters / YouTube reporting (Al Jazeera-affiliated) 20 Apr,Strongly against (diplomatic channel closed),High,Confirmed
+2026-04-21,No new vessel attacks reported since 19 April interdiction (tactical pause <48 hours),UANI / CENTCOM-linked updates 19–21 Apr,Mildly toward (short pause),High,Confirmed
+2026-04-21,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-21,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera / MARAD 9–21 Apr,Neutral,High,Confirmed
+2026-04-22,CENTCOM confirmed turning back two additional Iranian-linked vessels on 21 April in Gulf of Oman,CENTCOM / Reuters / UANI 21–22 Apr,Strongly against (continued enforcement actions),High,Confirmed
+2026-04-22,Windward data: 4 transits on 21 April (volumes ~96% below baseline),Windward Maritime Intelligence Daily (21 Apr) / Bloomberg 21–22 Apr,Strongly against (persistent collapse),High,Confirmed
+2026-04-22,Iran maintains reimposed Strait closure but issues public statement offering “conditional compliance” if US eases enforcement,Al Jazeera / Reuters / Iranian state media (IRNA) 21–22 Apr,Mildly toward (first conditional signal since re-closure),High,Confirmed
+2026-04-22,No new vessel attacks reported in past 72 hours,UANI / CENTCOM-linked updates 20–22 Apr,Mildly toward (short pause),High,Confirmed
+2026-04-22,Diplomatic talks remain stalled; no second round scheduled,Reuters / CNN 21–22 Apr,Strongly against (no diplomatic momentum),High,Confirmed
+2026-04-22,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-22,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera / MARAD 9–22 Apr,Neutral,High,Confirmed
+2026-04-23,CENTCOM reports no new turn-backs in past 24 hours,CENTCOM / Reuters 22–23 Apr,Mildly toward (temporary lull in enforcement),High,Confirmed
+2026-04-23,Windward data: 6 transits on 22 April (volumes ~95% below baseline),Windward Maritime Intelligence Daily (22 Apr) / Bloomberg 22–23 Apr,Mildly toward (modest daily uptick) but overall strongly against,High,Confirmed
+2026-04-23,Iran reiterates “conditional compliance” offer via formal note specifying phased enforcement relief for corridor access,Iranian Foreign Ministry statement (via Reuters / Al Jazeera) 22–23 Apr,Mildly toward (formalized diplomatic overture),High,Confirmed
+2026-04-23,No new vessel attacks reported in past 96 hours,UANI / CENTCOM-linked updates 20–23 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-23,Diplomatic channel shows tentative movement; US confirms receipt of note but no second-round scheduling,Reuters / CNN 22–23 Apr,Mildly toward (channel open),High,Confirmed
+2026-04-23,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-23,Houthi Bab el-Mandeb signaling unchanged and non-activated,Al Jazeera / MARAD 9–23 Apr,Neutral,High,Confirmed
+2026-04-24,CENTCOM: 31 vessels directed to turn around since blockade start,CENTCOM / Anadolu Ajansi / Reuters 22–24 Apr,Strongly against (ongoing enforcement),High,Confirmed
+2026-04-24,Iran seized two commercial ships in Strait of Hormuz on 22 April (IRGC); vessels stationary off coast,CNN / CNBC Africa / Al Jazeera 22–24 Apr,Strongly against (direct Iranian counter-action),High,Confirmed
+2026-04-24,Iran attacked three additional commercial ships in/near Strait on 22 April,Washington Post / NPR / AP 22–23 Apr,Strongly against (fresh kinetic incidents),High,Confirmed
+2026-04-24,Windward data: 4 transits on 23 April (volumes ~96% below baseline),Windward / UANI-linked reporting 23–24 Apr,Strongly against (persistent collapse),High,Confirmed
+2026-04-24,Ceasefire extended by US but talks in limbo; Iran calls extension “meaningless” absent blockade lift,Reuters / KNKX / Axios 23–24 Apr,Mildly toward (extension) but overall strongly against (stalled diplomacy),High,Confirmed
+2026-04-24,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters / Edison 15–24 Apr,Strongly against,High,Confirmed
+2026-04-24,Houthi Bab el-Mandeb signaling unchanged and non-activated,MARAD / Al Jazeera 9–24 Apr,Neutral,High,Confirmed
+2026-04-25,CENTCOM reports continued selective turn-backs but no new boardings in past 48 hours,CENTCOM / Reuters 24–25 Apr,Mildly toward (lull in enforcement actions),High,Confirmed
+2026-04-25,Windward data: 8 transits on 24 April (volumes ~94% below baseline),Windward Maritime Intelligence Daily (24 Apr) / Bloomberg 24–25 Apr,Mildly toward (continued modest daily uptick) but overall against,High,Confirmed
+2026-04-25,Iran releases one of two ships seized on 22 April following US counter-proposal delivery,Al Jazeera / Reuters / Iranian state media (IRNA) 24–25 Apr,Mildly toward (partial de-escalation gesture),High,Confirmed
+2026-04-25,US delivers counter-proposal on phased enforcement relief tied to verifiable corridor access; tentative 28 April meeting indicated,US State Department readout / CNN / Axios 24–25 Apr,Mildly toward (formal diplomatic exchange),High,Confirmed
+2026-04-25,No new vessel attacks reported in past 72 hours,UANI / CENTCOM-linked updates 23–25 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-25,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-25,Houthi Bab el-Mandeb signaling unchanged and non-activated,MARAD / Al Jazeera 9–25 Apr,Neutral,High,Confirmed
+2026-04-26,No new turn-backs reported in past 72 hours (enforcement limited to monitoring),CENTCOM / Reuters 25–26 Apr,Mildly toward (further lull in active enforcement),High,Confirmed
+2026-04-26,Windward data: 11 transits on 25 April (volumes ~92% below baseline),Windward Maritime Intelligence Daily (25 Apr) / Bloomberg 25–26 Apr,Mildly toward (continued modest daily uptick) but overall against,High,Confirmed
+2026-04-26,Iran releases second seized vessel following receipt of US counter-proposal,Al Jazeera / Reuters / IRNA 25–26 Apr,Mildly toward (completion of de-escalation gesture),High,Confirmed
+2026-04-26,Both sides confirm 28 April meeting will proceed in neutral third-country venue under Omani facilitation,US State Department / Iranian Foreign Ministry / Reuters 25–26 Apr,Mildly toward (scheduled diplomatic engagement),High,Confirmed
+2026-04-26,No new vessel attacks or seizures reported in past 96 hours,UANI / CENTCOM-linked updates 24–26 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-26,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-26,Houthi Bab el-Mandeb signaling unchanged and non-activated,MARAD / Al Jazeera 9–26 Apr,Neutral,High,Confirmed
+2026-04-27,No new turn-backs or boardings reported in past 96 hours (enforcement limited to monitoring/shadowing),CENTCOM / Reuters 26–27 Apr,Mildly toward (sustained enforcement lull),High,Confirmed
+2026-04-27,Windward data: 15 transits on 26 April (volumes ~89% below baseline),Windward Maritime Intelligence Daily (26 Apr) / Bloomberg 26–27 Apr,Mildly toward (continued daily uptick) but overall against,High,Confirmed
+2026-04-27,Preparatory agenda exchanges completed ahead of 28 April meeting,Omani Foreign Ministry / Reuters / Al Jazeera 26–27 Apr,Mildly toward (pre-meeting momentum),High,Confirmed
+2026-04-27,Iran reiterates full Hormuz reopening requires verifiable US enforcement relief,Iranian Foreign Ministry (via IRNA) / Reuters 26–27 Apr,Mildly toward (consistent conditional stance),High,Confirmed
+2026-04-27,"No new vessel attacks, seizures, or proxy activations in past 120 hours",UANI / CENTCOM-linked updates 25–27 Apr,Mildly toward (extended pause),High,Confirmed
+2026-04-27,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-27,Houthi Bab el-Mandeb signaling unchanged and non-activated,MARAD / Al Jazeera 9–27 Apr,Neutral,High,Confirmed
+2026-04-28,"No turn-backs, boardings, or shadowing reported in past 120 hours (enforcement now passive monitoring only)",CENTCOM / Reuters 27–28 Apr,Toward (further sustained enforcement de-escalation),High,Confirmed
+2026-04-28,Windward data: 19 transits on 27 April (volumes ~86% below baseline),Windward Maritime Intelligence Daily (27 Apr) / Bloomberg 27–28 Apr,Mildly toward (continued daily uptick) but overall against,High,Confirmed
+2026-04-28,28 April meeting concludes with “preliminary understanding” on phased verification measures; testing period announced for next 10 days,Joint Omani readout / US State Department / Iranian Foreign Ministry / Reuters 28 Apr,Toward (first concrete diplomatic output),High,Confirmed
+2026-04-28,Iran calls outcome “constructive but insufficient”; US confirms framework will be tested,IRNA / Reuters / Axios 28 Apr,Mildly toward (both sides acknowledge progress),High,Confirmed
+2026-04-28,"No new vessel attacks, seizures, or proxy activations in past 144 hours",UANI / CENTCOM-linked updates 26–28 Apr,Toward (extended pause),High,Confirmed
+2026-04-28,"Ras Laffan 17% capacity loss, 3–5 year repairs, QatarEnergy force majeure unchanged",QatarEnergy / Reuters ongoing,Strongly against,High,Confirmed
+2026-04-28,Houthi Bab el-Mandeb signaling unchanged and non-activated,MARAD / Al Jazeera 9–28 Apr,Neutral,High,Confirmed
