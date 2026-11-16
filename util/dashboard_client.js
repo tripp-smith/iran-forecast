@@ -320,6 +320,301 @@
 
   renderGateCharts();
 
+  function renderNarrativeShift() {
+    var ns = DATA.narrativeShift;
+    if (!ns || !ns.stream || !ns.stream.length) return;
+
+    var themeDomain = ns.themes || [
+      "Escorts & force attrition",
+      "War shock & LNG damage",
+      "Diplomacy & war-cost pressure",
+      "Failed deals & Strait control",
+      "Workaround oil & harassment",
+      "Insurance & commercial lag",
+    ];
+    var themeRange = [
+      "#38bdf8",
+      "#fb7185",
+      "#34d399",
+      "#f59e0b",
+      "#c084fc",
+      "#facc15",
+    ];
+    var colorScale = { domain: themeDomain, range: themeRange };
+
+    var streamEl = document.getElementById("narrative-stream");
+    if (streamEl) {
+      vegaEmbedSafe("#narrative-stream", {
+        $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+        background: null,
+        config: {
+          axis: axisConfig,
+          view: { stroke: null },
+          legend: {
+            labelColor: "#e4e4e7",
+            titleColor: "#e4e4e7",
+            orient: "top",
+            direction: "horizontal",
+            columns: 3,
+            symbolType: "square",
+            labelLimit: 240,
+          },
+        },
+        width: "container",
+        height: 275,
+        layer: [
+          {
+            data: { values: ns.stream },
+            mark: { type: "area", interpolate: "monotone", opacity: 0.88 },
+            encoding: {
+              x: {
+                field: "dateT",
+                type: "temporal",
+                title: null,
+                scale: { domain: [dates[0], dates[dates.length - 1]] },
+                axis: { format: "%b", labelAngle: 0, tickCount: "month", grid: false },
+              },
+              y: {
+                field: "share",
+                type: "quantitative",
+                stack: "normalize",
+                axis: { format: ".0%", title: "Share of driver weight" },
+              },
+              color: {
+                field: "theme",
+                type: "nominal",
+                scale: colorScale,
+                title: null,
+              },
+              order: { field: "order", type: "quantitative" },
+              tooltip: [
+                { field: "bin", type: "nominal", title: "Window" },
+                { field: "theme", type: "nominal", title: "Theme" },
+                { field: "share", type: "quantitative", title: "Weight share (%)", format: ".1f" },
+                { field: "exampleDate", type: "nominal", title: "Sample run" },
+                { field: "example", type: "nominal", title: "Top verbatim driver" },
+              ],
+            },
+          },
+          {
+            data: { values: chartEvents },
+            mark: {
+              type: "rule",
+              strokeDash: [4, 4],
+              strokeWidth: 1.2,
+              color: "#fafafa",
+              opacity: 0.55,
+            },
+            encoding: {
+              x: {
+                field: "dateT",
+                type: "temporal",
+                scale: { domain: [dates[0], dates[dates.length - 1]] },
+              },
+              tooltip: [
+                { field: "date", type: "nominal", title: "Milestone" },
+                { field: "title", type: "nominal", title: "Event" },
+              ],
+            },
+          },
+        ],
+      });
+    }
+
+    var bumpEl = document.getElementById("narrative-bump");
+    if (bumpEl && ns.bump && ns.bump.length) {
+      vegaEmbedSafe("#narrative-bump", {
+        $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+        background: null,
+        config: {
+          axis: axisConfig,
+          view: { stroke: null },
+          legend: {
+            labelColor: "#e4e4e7",
+            orient: "bottom",
+            direction: "horizontal",
+            columns: 2,
+            labelLimit: 220,
+          },
+        },
+        width: "container",
+        height: 255,
+        data: { values: ns.bump },
+        layer: [
+          {
+            mark: { type: "line", strokeWidth: 2.75, interpolate: "monotone" },
+            encoding: {
+              x: {
+                field: "monthLabel",
+                type: "ordinal",
+                sort: { field: "monthOrder", op: "min" },
+                title: null,
+                axis: { labelAngle: 0, grid: false },
+              },
+              y: {
+                field: "rank",
+                type: "ordinal",
+                sort: [1, 2, 3, 4, 5, 6],
+                title: "Monthly rank",
+                axis: { labelExpr: "'#' + datum.value" },
+              },
+              color: {
+                field: "theme",
+                type: "nominal",
+                scale: colorScale,
+                title: null,
+              },
+            },
+          },
+          {
+            mark: { type: "circle", opacity: 1, stroke: "#09090b", strokeWidth: 1.5 },
+            encoding: {
+              x: {
+                field: "monthLabel",
+                type: "ordinal",
+                sort: { field: "monthOrder", op: "min" },
+              },
+              y: {
+                field: "rank",
+                type: "ordinal",
+                sort: [1, 2, 3, 4, 5, 6],
+              },
+              size: {
+                field: "share",
+                type: "quantitative",
+                scale: { range: [55, 260] },
+                legend: null,
+              },
+              color: {
+                field: "theme",
+                type: "nominal",
+                scale: colorScale,
+                legend: null,
+              },
+              tooltip: [
+                { field: "month", type: "nominal", title: "Month" },
+                { field: "theme", type: "nominal", title: "Theme" },
+                { field: "rank", type: "ordinal", title: "Rank" },
+                { field: "share", type: "quantitative", title: "Share (%)", format: ".1f" },
+                { field: "exampleDate", type: "nominal", title: "Sample run" },
+                { field: "example", type: "nominal", title: "Top verbatim driver" },
+              ],
+            },
+          },
+        ],
+      });
+    }
+
+    var tugEl = document.getElementById("narrative-tug");
+    if (tugEl && ns.tug && ns.tug.length) {
+      vegaEmbedSafe("#narrative-tug", {
+        $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+        background: null,
+        config: {
+          axis: axisConfig,
+          view: { stroke: null },
+          legend: {
+            labelColor: "#e4e4e7",
+            orient: "bottom",
+            direction: "horizontal",
+            columns: 2,
+            labelLimit: 220,
+          },
+        },
+        width: "container",
+        height: 255,
+        layer: [
+          {
+            data: { values: ns.tug },
+            mark: { type: "bar", cornerRadiusTopLeft: 2, cornerRadiusTopRight: 2, opacity: 0.9 },
+            encoding: {
+              x: {
+                field: "monthLabel",
+                type: "ordinal",
+                sort: { field: "monthOrder", op: "min" },
+                title: null,
+                axis: { labelAngle: 0, grid: false },
+              },
+              y: {
+                field: "signedShare",
+                type: "quantitative",
+                scale: { domain: [-100, 100] },
+                title: "Against (−%)  ←  0  →  Toward (+%)",
+                axis: { labelExpr: "abs(datum.value) + '%'" },
+              },
+              color: {
+                field: "theme",
+                type: "nominal",
+                scale: colorScale,
+                title: null,
+              },
+              order: { field: "order", type: "quantitative" },
+              tooltip: [
+                { field: "month", type: "nominal", title: "Month" },
+                { field: "direction", type: "nominal", title: "Ledger side" },
+                { field: "theme", type: "nominal", title: "Theme" },
+                { field: "absShare", type: "quantitative", title: "Side share (%)", format: ".1f" },
+                { field: "exampleDate", type: "nominal", title: "Sample run" },
+                { field: "example", type: "nominal", title: "Top verbatim driver" },
+              ],
+            },
+          },
+          {
+            data: { values: [{ y0: 0 }] },
+            mark: { type: "rule", color: "#fafafa", strokeWidth: 1.25, opacity: 0.75 },
+            encoding: { y: { field: "y0", type: "quantitative" } },
+          },
+        ],
+      });
+    }
+
+    var actsEl = document.getElementById("narrative-acts");
+    if (actsEl && ns.acts && ns.acts.length) {
+      var escCard = function (s) {
+        var d = document.createElement("div");
+        d.textContent = s == null ? "" : String(s);
+        return d.innerHTML;
+      };
+      actsEl.innerHTML = "";
+      ns.acts.forEach(function (act) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className =
+          "text-left bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-cyan-500/60 rounded-2xl p-4 transition flex flex-col justify-between gap-3";
+        btn.innerHTML =
+          '<div>' +
+          '<div class="flex items-center justify-between gap-2 mb-1">' +
+          '<span class="text-[11px] font-mono uppercase text-amber-300">' +
+          escCard(act.badge) +
+          "</span>" +
+          '<span class="text-xs font-mono text-cyan-300">6m: ' +
+          escCard(act.prob6m || "—") +
+          "%</span></div>" +
+          '<div class="heading-font text-sm font-semibold text-zinc-100 mb-3">' +
+          escCard(act.subtitle) +
+          "</div>" +
+          '<div class="space-y-2.5 text-xs leading-relaxed">' +
+          '<div><span class="font-mono text-[10px] uppercase text-teal-300 block mb-0.5">#1 Toward</span>' +
+          '<span class="text-zinc-300">' +
+          escCard(act.topToward) +
+          "</span></div>" +
+          '<div><span class="font-mono text-[10px] uppercase text-amber-400 block mb-0.5">#1 Against</span>' +
+          '<span class="text-zinc-300">' +
+          escCard(act.topAgainst) +
+          "</span></div>" +
+          "</div></div>" +
+          '<div class="pt-2.5 border-t border-zinc-800/90 text-[11px] text-zinc-400">' +
+          '<span class="font-mono text-[10px] uppercase text-zinc-500">6m gate: </span>' +
+          escCard(act.gate6m || "—") +
+          "</div>";
+        btn.addEventListener("click", function () {
+          setSelectedDate(act.date, true);
+        });
+        actsEl.appendChild(btn);
+      });
+    }
+  }
+
   const sixMoByDate = {};
   probLong.forEach(function (row) {
     if (row.horizon === "6 Months" && row.probability != null) {
@@ -661,6 +956,7 @@
 
   setSelectedDate(latestDate, false);
   renderMilestones();
+  renderNarrativeShift();
 
   const tbody = document.getElementById("delta-table-body");
   HORIZON_LABELS.forEach(function (label, idx) {

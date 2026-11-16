@@ -69,8 +69,10 @@ _SECTION_ALIASES = [
     (re.compile(r"^Evidence Ledger\b.*", re.I), "Evidence Ledger"),
     (re.compile(r"^Current Situation Snapshot\b.*", re.I), "Current Situation Snapshot"),
     (re.compile(r"^Operational Definition\b.*", re.I), "Operational Definition of “Return to Functional Normality”"),
-    (re.compile(r"^Key Drivers Toward Normalization\b.*", re.I), "Key Drivers Toward Normalization"),
-    (re.compile(r"^Key Drivers Against Normalization\b.*", re.I), "Key Drivers Against Normalization"),
+    (re.compile(r"^Key Drivers Toward\b.*", re.I), "Key Drivers Toward Normalization"),
+    (re.compile(r"^Key Drivers Against\b.*", re.I), "Key Drivers Against Normalization"),
+    (re.compile(r"^Toward(?:\s+Normalization)?(?:\s*\([^)]*\))?$", re.I), "Key Drivers Toward Normalization"),
+    (re.compile(r"^Against(?:\s+Normalization)?(?:\s*\([^)]*\))?$", re.I), "Key Drivers Against Normalization"),
     (re.compile(r"^Most Likely Path\b.*", re.I), "Most Likely Path"),
     (re.compile(r"^Faster Normalization Case\b.*", re.I), "Faster Normalization Case"),
     (re.compile(r"^Prolonged Instability Case\b.*", re.I), "Prolonged Instability Case"),
@@ -112,9 +114,14 @@ def normalize_forecast_text(text: str) -> str:
     text = re.sub(r"^#{2,4}\s+(.+)$", hash_repl, text, flags=re.MULTILINE)
 
     def bold_repl(m: re.Match[str]) -> str:
-        return f"**{canon_inner(m.group(1))}**"
+        return f"{m.group(1)}**{canon_inner(m.group(2))}**"
 
-    text = re.sub(r"\*\*([^*]+)\*\*", bold_repl, text)
+    text = re.sub(
+        r"^(\s*(?:[•\-\*]\s*)?)\*\*([^*]+)\*\*",
+        bold_repl,
+        text,
+        flags=re.MULTILINE,
+    )
     return text
 
 
@@ -199,16 +206,76 @@ def parse_evidence_table(text: str) -> list[dict[str, str]]:
     return rows
 
 
-def parse_numbered_drivers(text: str, section_start: str, until: str) -> list[str]:
+def parse_numbered_drivers(
+    text: str, section_start: str, until: str | list[str]
+) -> list[str]:
     if section_start not in text:
         return []
-    block = extract_between(text, section_start, [until])
+    end_markers = [until] if isinstance(until, str) else list(until)
+    # Strip leading ** if caller passed bold markers; extract_between handles both.
+    clean_markers = [m.strip("*") for m in end_markers]
+    block = extract_between(text, section_start, clean_markers)
+    if not block:
+        return []
+    block = re.sub(r"<grok:render[\s\S]*?</grok:render>", "", block, flags=re.I)
+    block = re.sub(r"<grok:render[^>]*/>", "", block, flags=re.I)
+    lines = block.splitlines()
+    if lines and re.match(r"^\s*(?:\([^)]*\))?\s*:?\s*$", lines[0]):
+        lines = lines[1:]
+    elif lines and re.match(r"^\s*\([^)]*\)\s*:\s*\S+", lines[0]):
+        lines[0] = re.sub(r"^\s*\([^)]*\)\s*:\s*", "", lines[0])
+    elif lines and lines[0].lstrip().startswith(":"):
+        lines[0] = lines[0].lstrip()[1:].strip()
+
+    cleaned_text = "\n".join(lines).strip()
+    if not cleaned_text:
+        return []
+
     items: list[str] = []
-    for line in block.splitlines():
-        m = re.match(r"^\d+\.\s*(.+)$", line.strip())
+    for raw in lines:
+        s = raw.strip()
+        if not s or re.match(
+            r"^(?:Ranked\s+importance|Overall|Net\s+balance|Summary)\s*:",
+            s,
+            re.I,
+        ):
+            continue
+        m = re.match(r"^(?:\d+[.)]|\(\d+\)|[•\-\*])\s+(.+)$", s)
         if m:
-            items.append(m.group(1).strip())
-    return items
+            items.append(re.sub(r"\*\*([^*]+)\*\*", r"\1", m.group(1).strip()))
+    if items:
+        return items
+
+    inline_num = re.split(
+        r"(?:^|[\s;])(?:\(\d+\)|\d+\))\s+",
+        re.sub(r"^\s*Ranked\s*:\s*", "", cleaned_text, flags=re.I),
+    )
+    inline_num = [x.strip(" ;.") for x in inline_num if x.strip(" ;.")]
+    if len(inline_num) >= 2:
+        return [re.sub(r"\*\*([^*]+)\*\*", r"\1", x) for x in inline_num]
+
+    body = re.sub(r"^\s*(?:\([^)]*\)\s*)?:?\s*", "", cleaned_text)
+    semi = [x.strip(" .") for x in body.split(";") if x.strip(" .")]
+    if len(semi) >= 2:
+        return [re.sub(r"\*\*([^*]+)\*\*", r"\1", x) for x in semi]
+
+    parts: list[str] = []
+    cur: list[str] = []
+    depth = 0
+    for ch in body:
+        if ch == "(":
+            depth += 1
+        elif ch == ")":
+            depth = max(0, depth - 1)
+        if ch == "," and depth == 0:
+            parts.append("".join(cur).strip(" ."))
+            cur = []
+        else:
+            cur.append(ch)
+    if cur:
+        parts.append("".join(cur).strip(" ."))
+    parts = [re.sub(r"\*\*([^*]+)\*\*", r"\1", p) for p in parts if p]
+    return parts if len(parts) >= 2 else ([parts[0]] if parts else [])
 
 
 def parse_sub_forecasts(text: str) -> list[dict[str, Any]]:
@@ -448,12 +515,19 @@ def parse_file(path: Path) -> dict[str, Any]:
     toward = parse_numbered_drivers(
         text,
         "**Key Drivers Toward Normalization**",
-        "**Key Drivers Against Normalization**",
+        [
+            "Key Drivers Against Normalization",
+            "Decomposed Sub-Forecasts",
+            "Final Probability Forecasts by Horizon",
+        ],
     )
     against = parse_numbered_drivers(
         text,
         "**Key Drivers Against Normalization**",
-        "**Decomposed Sub-Forecasts**",
+        [
+            "Decomposed Sub-Forecasts",
+            "Final Probability Forecasts by Horizon",
+        ],
     )
     sub_forecasts = parse_sub_forecasts(text)
     horizon_details = parse_final_probability_sections(text)
@@ -612,6 +686,246 @@ def build_narratives_json(parsed: list[dict[str, Any]]) -> dict[str, Any]:
             "summary_table": p["summary_table"],
         }
     return out
+
+
+_NARRATIVE_THEMES: list[tuple[str, int, re.Pattern[str]]] = [
+    (
+        "Escorts & force attrition",
+        1,
+        re.compile(
+            r"\bescort|convoy|project\s+freedom|naval\s+superiority|military\s+(?:superiority|edge|degrad|damage)|degrad|deplet|resource\s+constraint|inventory|anti-?shipping\s+capacity|demin|mine\s+(?:clearance|counter)|quick\s+de-?escalat",
+            re.I,
+        ),
+    ),
+    (
+        "War shock & LNG damage",
+        2,
+        re.compile(
+            r"ras\s+laffan|south\s+pars|\blng\b.*(?:damage|repair|halt|outage)|force\s+majeure|infrastructure\s+(?:target|damage)|barrage|high-?intensity|attrition\s+war|hezbollah|second\s+front|proxy.*(?:activation|cycle|escalat)|militia\s+activation",
+            re.I,
+        ),
+    ),
+    (
+        "Diplomacy & war-cost pressure",
+        3,
+        re.compile(
+            r"\bdiplom|oman|qatar|pakistan|china|islamabad|talks|mediat|meeting|one-?page|off-?ramp|proposal|electoral|midterm|wrap\s+up|exhaust|fatigue|economic\s+(?:pain|pressure|incentive|cost)|revenue|buyer|demand\s+destruction|preference\s+for\s+de-?escalat|compliance|verification\s+test",
+            re.I,
+        ),
+    ),
+    (
+        "Failed deals & Strait control",
+        4,
+        re.compile(
+            r"\bblockade|toll|permit|fee|strait\s+(?:control|authority|sovereignty|access|admin)|hormuz\s+(?:control|sovereignty|leverage|access|admin)|control/admin|administrative/control|sovereignty|maximalist|nuclear|sanction|reparation|unresolved\s+core|conditions\s+as\s+core|leverage\s+contest|parallel\s+control|distrust|collapsed?\s+(?:prior|interim|ceasefire|mou)|reversib|interim\s+arrangement|lapsed|stalled\s+talks",
+            re.I,
+        ),
+    ),
+    (
+        "Workaround oil & harassment",
+        5,
+        re.compile(
+            r"\bdark\b|ghost-?fleet|ais-?off|pipeline|alternative\s+route|non-?gulf\s+supply|bypass|workaround|partial\s+(?:oil|commercial|rebound)|southern\s+corridor|protected\s+corridor|facilitation|elevated\s+cost|low-?intensity|harass|deniable|tit-?for-?tat|mow-?the-?lawn|houthi|red\s+sea|bab\s+al-?mandeb|dual-?chokepoint|shipping\s+attack|skirmish|low-?cost\s+disruption",
+            re.I,
+        ),
+    ),
+    (
+        "Insurance & commercial lag",
+        6,
+        re.compile(
+            r"\binsur|war-?risk|premium|underwrit|jwc|hull|aversion|sticki|hysteresis|commercial\s+(?:lag|confidence|caution|behavior|actor|recovery)|stranded|crew|owner|hesitation|repricing|lags?\s+(?:any|military|kinetic|heavily|weeks|months)|sustained\s+proof",
+            re.I,
+        ),
+    ),
+]
+
+
+def _short_quote(s: str, limit: int = 128) -> str:
+    clean = re.sub(r"<grok:render[\s\S]*?</grok:render>", "", s or "", flags=re.I)
+    clean = re.sub(r"<grok:render[^>]*/>", "", clean, flags=re.I)
+    clean = re.sub(r"\s+", " ", clean).strip()
+    if len(clean) <= limit:
+        return clean
+    return clean[: limit - 1].rsplit(" ", 1)[0] + "…"
+
+
+def compute_narrative_shift(parsed: list[dict[str, Any]]) -> dict[str, Any]:
+    """Compute theme composition, monthly ranks, Toward/Against split, and act cards."""
+    theme_names = [name for name, _, _ in _NARRATIVE_THEMES]
+    theme_order = {name: order for name, order, _ in _NARRATIVE_THEMES}
+
+    # Half-month bins for continuous stream (YYYY-MM-01 and YYYY-MM-16)
+    bin_weights: dict[str, dict[str, float]] = {}
+    bin_examples: dict[tuple[str, str], tuple[float, str, str]] = {}
+
+    # Monthly aggregates for bump ranks and Toward/Against tug-of-war
+    month_weights: dict[str, dict[str, float]] = {}
+    month_dir_weights: dict[str, dict[str, dict[str, float]]] = {}
+    month_examples: dict[tuple[str, str], tuple[float, str, str]] = {}
+    month_dir_examples: dict[tuple[str, str, str], tuple[float, str, str]] = {}
+
+    for p in parsed:
+        d = p["date_iso"]
+        if len(d) < 10:
+            continue
+        ym = d[:7]
+        day_num = int(d[8:10])
+        bin_date = f"{ym}-04" if day_num <= 15 else f"{ym}-19"
+        if d < "2026-04-01":
+            bin_date = "2026-03-24"
+        elif ym == "2026-11" and day_num <= 15:
+            bin_date = "2026-11-08"
+
+        bin_weights.setdefault(bin_date, {t: 0.0 for t in theme_names})
+        month_weights.setdefault(ym, {t: 0.0 for t in theme_names})
+        month_dir_weights.setdefault(
+            ym,
+            {
+                "toward": {t: 0.0 for t in theme_names},
+                "against": {t: 0.0 for t in theme_names},
+            },
+        )
+
+        for side, items in (
+            ("toward", p.get("drivers_toward") or []),
+            ("against", p.get("drivers_against") or []),
+        ):
+            for idx, item in enumerate(items, start=1):
+                w = max(1.0, 6.0 - idx)
+                hits = [name for name, _, pat in _NARRATIVE_THEMES if pat.search(item)]
+                if not hits:
+                    continue
+                share = w / len(hits)
+                snippet = _short_quote(item, 125)
+                for h in hits:
+                    bin_weights[bin_date][h] += share
+                    month_weights[ym][h] += share
+                    month_dir_weights[ym][side][h] += share
+                    if w > bin_examples.get((bin_date, h), (0.0, "", ""))[0]:
+                        bin_examples[(bin_date, h)] = (w, d, snippet)
+                    if w > month_examples.get((ym, h), (0.0, "", ""))[0]:
+                        month_examples[(ym, h)] = (w, d, snippet)
+                    if w > month_dir_examples.get((ym, side, h), (0.0, "", ""))[0]:
+                        month_dir_examples[(ym, side, h)] = (w, d, snippet)
+
+    stream_rows: list[dict[str, Any]] = []
+    for bdate in sorted(bin_weights):
+        tot = sum(bin_weights[bdate].values()) or 1.0
+        for t in theme_names:
+            ex = bin_examples.get((bdate, t), (0.0, bdate, "—"))
+            stream_rows.append(
+                {
+                    "dateT": bdate,
+                    "bin": bdate,
+                    "theme": t,
+                    "order": theme_order[t],
+                    "share": round(100.0 * bin_weights[bdate][t] / tot, 1),
+                    "exampleDate": ex[1],
+                    "example": ex[2],
+                }
+            )
+
+    month_labels = {
+        "01": "Jan",
+        "02": "Feb",
+        "03": "Mar",
+        "04": "Apr",
+        "05": "May",
+        "06": "Jun",
+        "07": "Jul",
+        "08": "Aug",
+        "09": "Sep",
+        "10": "Oct",
+        "11": "Nov",
+        "12": "Dec",
+    }
+    bump_rows: list[dict[str, Any]] = []
+    tug_rows: list[dict[str, Any]] = []
+    sorted_months = sorted(month_weights)
+    for m_idx, ym in enumerate(sorted_months):
+        mlabel = month_labels.get(ym[5:7], ym)
+        tot = sum(month_weights[ym].values()) or 1.0
+        ranked = sorted(
+            theme_names,
+            key=lambda t: (-month_weights[ym][t], theme_order[t]),
+        )
+        rank_map = {t: r for r, t in enumerate(ranked, start=1)}
+        for t in theme_names:
+            ex = month_examples.get((ym, t), (0.0, f"{ym}-01", "—"))
+            bump_rows.append(
+                {
+                    "month": ym,
+                    "monthLabel": mlabel,
+                    "monthOrder": m_idx,
+                    "theme": t,
+                    "order": theme_order[t],
+                    "rank": rank_map[t],
+                    "share": round(100.0 * month_weights[ym][t] / tot, 1),
+                    "isLast": m_idx == len(sorted_months) - 1,
+                    "exampleDate": ex[1],
+                    "example": ex[2],
+                }
+            )
+        for side in ("toward", "against"):
+            stot = sum(month_dir_weights[ym][side].values()) or 1.0
+            sign = 1.0 if side == "toward" else -1.0
+            for t in theme_names:
+                pct = round(100.0 * month_dir_weights[ym][side][t] / stot, 1)
+                ex = month_dir_examples.get((ym, side, t), (0.0, f"{ym}-01", "—"))
+                tug_rows.append(
+                    {
+                        "month": ym,
+                        "monthLabel": mlabel,
+                        "monthOrder": m_idx,
+                        "direction": "Toward normalization"
+                        if side == "toward"
+                        else "Against normalization",
+                        "theme": t,
+                        "order": theme_order[t],
+                        "signedShare": round(sign * pct, 1),
+                        "absShare": pct,
+                        "exampleDate": ex[1],
+                        "example": ex[2],
+                    }
+                )
+
+    by_date = {p["date_iso"]: p for p in parsed}
+    act_specs = [
+        ("2026-03-19", "Act I · Mar 19", "Escorts & attrition framing"),
+        ("2026-04-28", "Act II · Apr 28", "Blockade meets spring talks"),
+        ("2026-06-23", "Act III · Jun 23", "Islamabad / MOU peak"),
+        ("2026-11-15", "Act IV · Nov 15", "Workarounds & commercial lag"),
+    ]
+    acts: list[dict[str, Any]] = []
+    for target_d, badge, subtitle in act_specs:
+        p = by_date.get(target_d)
+        if not p and parsed:
+            p = parsed[-1]
+            target_d = p["date_iso"]
+        if not p:
+            continue
+        hd6 = (p.get("horizon_details") or {}).get("6 Months") or {}
+        tw = (p.get("drivers_toward") or [""])[0]
+        ag = (p.get("drivers_against") or [""])[0]
+        acts.append(
+            {
+                "date": target_d,
+                "badge": badge,
+                "subtitle": subtitle,
+                "prob6m": hd6.get("probability", ""),
+                "gate6m": _short_quote(hd6.get("main_gating_factor", ""), 95),
+                "topToward": _short_quote(tw, 135),
+                "topAgainst": _short_quote(ag, 135),
+            }
+        )
+
+    return {
+        "themes": theme_names,
+        "stream": stream_rows,
+        "bump": bump_rows,
+        "tug": tug_rows,
+        "acts": acts,
+    }
 
 
 def html_escape(s: str) -> str:
@@ -991,6 +1305,7 @@ def build_html(
       <div class="hidden md:flex items-center gap-6 text-xs font-medium">
         <a href="#trajectory" class="hover:text-cyan-300">TRAJECTORY</a>
         <a href="#heatmap" class="hover:text-cyan-300">GATES</a>
+        <a href="#narrative" class="hover:text-cyan-300">NARRATIVE</a>
         <a href="#detail" class="hover:text-cyan-300">DAILY</a>
         <a href="#deltas" class="hover:text-cyan-300">FIRST→LATEST</a>
         <a href="#qualitative" class="hover:text-cyan-300">MEMO</a>
@@ -1045,6 +1360,37 @@ def build_html(
       <p class="text-zinc-500 text-sm mt-2 max-w-3xl">Same horizon, three gates. Absolute levels on the left; how many points each commercial gate trails strike-pause on the right.</p>
     </div>
     <div id="chart-heatmap" class="w-full grid grid-cols-1 lg:grid-cols-2 gap-6"></div>
+  </section>
+
+  <section id="narrative" class="max-w-screen-2xl mx-auto px-4 md:px-8 py-10 border-b border-zinc-800">
+    <div class="mb-6">
+      <div class="text-xs font-mono uppercase text-amber-300 mb-2">Narrative inside the runs</div>
+      <h2 class="heading-font text-2xl md:text-3xl font-semibold max-w-4xl">Early runs lean on naval escorts and war shock; later runs lean on failed deals, partial-oil workarounds, and insurance lag</h2>
+      <p class="text-zinc-400 text-sm mt-2 max-w-3xl">Rank-weighted themes across all {len(parsed)} daily Toward and Against driver lists (rank 1 weighted 5× down to rank 5 at 1×). Hover any band, rank dot, or bar for verbatim lines; click a turning-point card below to open that run.</p>
+    </div>
+    <div class="space-y-6">
+      <div class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-4 md:p-5">
+        <div class="text-sm font-medium text-zinc-200 heading-font">Escorts and opening war shock fall from 45% of March driver weight to 13% in November</div>
+        <p class="text-xs text-zinc-500 mt-0.5 mb-3">Half-month share of rank-weighted driver arguments (100% stacked), aligned with key conflict milestones.</p>
+        <div id="narrative-stream" class="w-full min-h-[300px]"></div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-4 md:p-5">
+          <div class="text-sm font-medium text-zinc-200 heading-font">Failed deals &amp; Strait control jump from #6 in March to #2 from May onward; workaround oil climbs to #3</div>
+          <p class="text-xs text-zinc-500 mt-0.5 mb-3">Monthly theme rank by total driver weight (#1 = largest share that month).</p>
+          <div id="narrative-bump" class="w-full min-h-[290px]"></div>
+        </div>
+        <div class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-4 md:p-5">
+          <div class="text-sm font-medium text-zinc-200 heading-font">Bullish drivers drop naval escorts (41%→12%); bearish drivers swap active strikes for Strait terms and harassment</div>
+          <p class="text-xs text-zinc-500 mt-0.5 mb-3">Above 0: share of Toward-normalization weight (+100%). Below 0: share of Against-normalization weight (−100%).</p>
+          <div id="narrative-tug" class="w-full min-h-[290px]"></div>
+        </div>
+      </div>
+      <div>
+        <div class="text-xs font-mono uppercase text-zinc-500 mb-3">Four turning points in the verbatim driver lists (click to inspect run)</div>
+        <div id="narrative-acts" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"></div>
+      </div>
+    </div>
   </section>
 
   <section id="detail" class="max-w-screen-2xl mx-auto px-4 md:px-8 py-10 border-b border-zinc-800">
@@ -1271,6 +1617,8 @@ def main() -> int:
         except json.JSONDecodeError:
             key_events = []
 
+    narrative_shift = compute_narrative_shift(parsed)
+
     embedded = {
         "dates": [p["date_iso"] for p in parsed],
         "narratives": narratives,
@@ -1278,6 +1626,7 @@ def main() -> int:
         "probLong": prob_long,
         "subLong": sub_long,
         "keyEvents": key_events,
+        "narrativeShift": narrative_shift,
     }
 
     source_prompt = (
