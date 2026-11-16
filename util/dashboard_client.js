@@ -371,6 +371,10 @@
         .replace(/\s+$/gm, "")
         .trim();
     };
+    // Forecast prose uses ~ for "approximately"; marked treats ~text~ as <del>.
+    const forMarkdown = function (s) {
+      return scrub(s).replace(/~(?!~)/g, "\\~");
+    };
     const esc = function (s) {
       const d = document.createElement("div");
       d.textContent = scrub(s);
@@ -480,9 +484,9 @@
         "</td></tr>";
     });
 
-    const snapHtml = marked.parse(scrub(n.snapshot || ""));
-    const opHtml = marked.parse(scrub(n.operational_definition || ""));
-    const sigHtml = marked.parse(scrub(n.critical_signals || ""));
+    const snapHtml = marked.parse(forMarkdown(n.snapshot || ""));
+    const opHtml = marked.parse(forMarkdown(n.operational_definition || ""));
+    const sigHtml = marked.parse(forMarkdown(n.critical_signals || ""));
 
     document.getElementById("detail-pane").innerHTML =
       '<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">' +

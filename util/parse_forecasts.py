@@ -24,13 +24,15 @@ HORIZON_LABELS = ["1 Week", "1 Month", "3 Months", "6 Months", "1 Year", "18 Mon
 HORIZON_KEYS = ["1wk", "1mo", "3mo", "6mo", "1yr", "18mo"]
 HORIZON_KEY_FOR_LABEL = dict(zip(HORIZON_LABELS, HORIZON_KEYS))
 
+# Accept 1w/1wk/1 week, 1m/1mo/1 month, optional ≈/~, <5%, and 5–10% ranges.
+_SUB_PCT = r"[~≈]?\s*<?\s*(\d+)(?:\s*[-–]\s*\d+)?\s*%"
 SUB_PCT_RE = re.compile(
-    r"1\s*w(?:ee)?k\s*[~≈]?\s*(\d+)\s*%\s*[,;]?\s*"
-    r"1\s*mo(?:nth)?\s*[~≈]?\s*(\d+)\s*%\s*[,;]?\s*"
-    r"3\s*mo(?:nth)?s?\s*[~≈]?\s*(\d+)\s*%\s*[,;]?\s*"
-    r"6\s*mo(?:nth)?s?\s*[~≈]?\s*(\d+)\s*%\s*[,;]?\s*"
-    r"1\s*y(?:ea)?r\s*[~≈]?\s*(\d+)\s*%\s*[,;]?\s*"
-    r"18\s*mo(?:nth)?s?\s*[~≈]?\s*(\d+)\s*%",
+    rf"1\s*w(?:k|eek)?\s*{_SUB_PCT}\s*[,;]?\s*"
+    rf"1\s*m(?:o(?:nth)?)?\s*{_SUB_PCT}\s*[,;]?\s*"
+    rf"3\s*m(?:o(?:nth)?s?)?\s*{_SUB_PCT}\s*[,;]?\s*"
+    rf"6\s*m(?:o(?:nth)?s?)?\s*{_SUB_PCT}\s*[,;]?\s*"
+    rf"1\s*y(?:r|ear)?\s*{_SUB_PCT}\s*[,;]?\s*"
+    rf"18\s*m(?:o(?:nth)?s?)?\s*{_SUB_PCT}",
     re.IGNORECASE,
 )
 
@@ -219,16 +221,18 @@ def parse_sub_forecasts(text: str) -> list[dict[str, Any]]:
     )
     out: list[dict[str, Any]] = []
     for line in block.splitlines():
-        line = line.strip()
-        if not line.startswith("-"):
-            continue
-        body = line.lstrip("-").strip()
+        body = line.strip().lstrip("-•*").strip()
         if ":" not in body:
             continue
         name, rest = body.split(":", 1)
         name = name.strip()
         rest = rest.strip()
+        if not name or len(name) > 120:
+            continue
         m = SUB_PCT_RE.search(rest)
+        if not m:
+            # Keep component-only prose rows out of the numeric table.
+            continue
         row: dict[str, Any] = {
             "component": name,
             "1wk": "",
@@ -238,9 +242,8 @@ def parse_sub_forecasts(text: str) -> list[dict[str, Any]]:
             "1yr": "",
             "18mo": "",
         }
-        if m:
-            for i, k in enumerate(HORIZON_KEYS):
-                row[k] = int(m.group(i + 1))
+        for i, k in enumerate(HORIZON_KEYS):
+            row[k] = int(m.group(i + 1))
         out.append(row)
     return out
 
