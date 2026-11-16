@@ -724,6 +724,8 @@ def build_html(
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/d3-milestones@2.0.0/build/d3-milestones.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3-milestones@2.0.0/build/d3-milestones.min.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
     body {{ font-family: 'Inter', system-ui, sans-serif; }}
@@ -937,6 +939,43 @@ def build_html(
       color: #67e8f9;
       border-top-color: #164e63;
     }}
+    /* d3-milestones on dark briefing chrome */
+    #chart-milestones {{
+      margin-top: 0.5rem;
+      padding: 0.75rem 0.25rem 0.25rem;
+      overflow-x: auto;
+    }}
+    #chart-milestones .milestones {{
+      color: #e4e4e7;
+      font-family: Inter, system-ui, sans-serif;
+    }}
+    #chart-milestones .milestones__horizontal_line {{
+      background-color: #3f3f46;
+    }}
+    #chart-milestones .milestones__group__bullet {{
+      background-color: #f59e0b;
+      border-color: #f59e0b;
+    }}
+    #chart-milestones .milestones__group__label {{
+      color: #a1a1aa;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 10px;
+    }}
+    #chart-milestones .milestones__group__label-text {{
+      background: #18181b;
+      border: 1px solid #3f3f46;
+      border-radius: 0.65rem;
+      color: #e4e4e7;
+      font-size: 12px;
+      line-height: 1.35;
+      padding: 0.45rem 0.6rem;
+      max-width: 11rem;
+      cursor: pointer;
+    }}
+    #chart-milestones .milestones__group__label-text:hover {{
+      border-color: #67e8f9;
+      color: #ecfeff;
+    }}
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen">
@@ -992,9 +1031,11 @@ def build_html(
 
   <section id="trajectory" class="max-w-screen-2xl mx-auto px-4 md:px-8 py-10 border-b border-zinc-800">
     <div class="text-xs font-mono uppercase text-cyan-400 mb-2">Trajectory</div>
-    <h2 class="heading-font text-2xl md:text-3xl font-semibold mb-4">Six-month normality odds fall 17 points from 18 March to 15 November</h2>
-    <p class="text-zinc-400 text-sm max-w-3xl mb-6">Monthly ticks, no point markers. Hover a line for the daily value and day-over-day change.</p>
+    <h2 class="heading-font text-2xl md:text-3xl font-semibold mb-4">April and June lifts reverse; by mid-November every horizon sits below March</h2>
+    <p class="text-zinc-400 text-sm max-w-3xl mb-6">Probability curves with vertical event markers. Timeline below uses the same key dates — click a label to open that day’s briefing.</p>
     <div id="chart-trajectory" class="w-full min-h-[380px]"></div>
+    <div class="text-xs font-mono uppercase text-amber-300 mt-8 mb-2">Key events</div>
+    <div id="chart-milestones" class="w-full min-h-[140px]"></div>
   </section>
 
   <section id="heatmap" class="max-w-screen-2xl mx-auto px-4 md:px-8 py-10 border-b border-zinc-800 bg-zinc-900/40">
@@ -1222,12 +1263,21 @@ def main() -> int:
                     }
                 )
 
+    events_path = ROOT / "analysis" / "key_events.json"
+    key_events: list[dict[str, Any]] = []
+    if events_path.exists():
+        try:
+            key_events = json.loads(_read_text(events_path))
+        except json.JSONDecodeError:
+            key_events = []
+
     embedded = {
         "dates": [p["date_iso"] for p in parsed],
         "narratives": narratives,
         "parsedByDate": {p["date_iso"]: p for p in parsed},
         "probLong": prob_long,
         "subLong": sub_long,
+        "keyEvents": key_events,
     }
 
     source_prompt = (

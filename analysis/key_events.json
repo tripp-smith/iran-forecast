@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2026-02-28",
+    "title": "War begins (Operation Epic Fury)",
+    "band": "shock",
+    "note": "US/Israeli opening strikes; series has not started yet."
+  },
+  {
+    "date": "2026-03-18",
+    "title": "Forecast series starts",
+    "band": "series",
+    "note": "First daily Grok run. 18-month normality odds at 80%."
+  },
+  {
+    "date": "2026-04-28",
+    "title": "April lift / meeting window",
+    "band": "lift",
+    "note": "Brief transit uptick around talks; blockade still in force. Odds peak above March on several horizons."
+  },
+  {
+    "date": "2026-06-23",
+    "title": "June MOU / memorandum peak",
+    "band": "lift",
+    "note": "Islamabad/MOU ceasefire narrative. Medium-horizon odds briefly reprice reopening."
+  },
+  {
+    "date": "2026-09-01",
+    "title": "Summer gains largely reversed",
+    "band": "reversal",
+    "note": "MOU window has faded without a broader deal. Medium/long horizons back below spring highs."
+  },
+  {
+    "date": "2026-11-15",
+    "title": "Latest run",
+    "band": "latest",
+    "note": "Every horizon ends lower than 18 March. 18-month 62%; 6-month 28%."
+  }
+]

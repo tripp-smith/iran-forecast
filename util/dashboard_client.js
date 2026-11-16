@@ -28,6 +28,27 @@
   const trajValues = probLong.map(function (row) {
     return Object.assign({}, row, { dateT: row.date });
   });
+  const keyEvents = (DATA.keyEvents || []).map(function (ev) {
+    return Object.assign({}, ev, { dateT: ev.date });
+  });
+  // Vertical markers only for events that fall inside the forecast window
+  // (war-start sits on the milestones strip alone).
+  const chartEvents = keyEvents.filter(function (ev) {
+    return ev.date >= dates[0] && ev.date <= dates[dates.length - 1];
+  });
+
+  const xTemporal = {
+    field: "dateT",
+    type: "temporal",
+    title: null,
+    scale: { domain: [dates[0], dates[dates.length - 1]] },
+    axis: {
+      format: "%b",
+      labelAngle: 0,
+      tickCount: "month",
+      grid: false,
+    },
+  };
 
   const trajSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v5.json",
@@ -45,46 +66,111 @@
     },
     width: "container",
     height: 340,
-    data: { values: trajValues },
-    transform: [{ calculate: "datum.probability - datum.prevProbability", as: "delta" }],
-    mark: { type: "line", strokeWidth: 1.75, interpolate: "monotone" },
-    encoding: {
-      x: {
-        field: "dateT",
-        type: "temporal",
-        title: null,
-        axis: {
-          format: "%b",
-          labelAngle: 0,
-          tickCount: "month",
-          grid: false,
+    layer: [
+      {
+        data: { values: trajValues },
+        transform: [
+          { calculate: "datum.probability - datum.prevProbability", as: "delta" },
+        ],
+        mark: { type: "line", strokeWidth: 1.75, interpolate: "monotone" },
+        encoding: {
+          x: xTemporal,
+          y: {
+            field: "probability",
+            type: "quantitative",
+            scale: { domain: [0, 100] },
+            title: "Normality probability (%)",
+          },
+          color: {
+            field: "horizon",
+            type: "nominal",
+            title: null,
+            scale: {
+              domain: HORIZON_LABELS,
+              range: ["#38bdf8", "#fb923c", "#f87171", "#2dd4bf", "#a3e635", "#facc15"],
+            },
+          },
+          opacity: { value: 0.9 },
+          tooltip: [
+            { field: "date", type: "nominal", title: "Forecast date" },
+            { field: "horizon", type: "nominal", title: "Horizon" },
+            { field: "probability", type: "quantitative", title: "Normality %" },
+            { field: "delta", type: "quantitative", title: "Change vs prior day" },
+          ],
         },
       },
-      y: {
-        field: "probability",
-        type: "quantitative",
-        scale: { domain: [0, 100] },
-        title: "Normality probability (%)",
-      },
-      color: {
-        field: "horizon",
-        type: "nominal",
-        title: null,
-        scale: {
-          domain: HORIZON_LABELS,
-          range: ["#38bdf8", "#fb923c", "#f87171", "#2dd4bf", "#a3e635", "#facc15"],
+      {
+        data: { values: chartEvents },
+        mark: {
+          type: "rule",
+          strokeDash: [4, 4],
+          strokeWidth: 1.25,
+          color: "#f59e0b",
+          opacity: 0.8,
+        },
+        encoding: {
+          x: xTemporal,
+          tooltip: [
+            { field: "date", type: "nominal", title: "Date" },
+            { field: "title", type: "nominal", title: "Event" },
+            { field: "note", type: "nominal", title: "Note" },
+          ],
         },
       },
-      opacity: { value: 0.9 },
-      tooltip: [
-        { field: "date", type: "nominal", title: "Forecast date" },
-        { field: "horizon", type: "nominal", title: "Horizon" },
-        { field: "probability", type: "quantitative", title: "Normality %" },
-        { field: "delta", type: "quantitative", title: "Change vs prior day" },
-      ],
-    },
+    ],
   };
   vegaEmbedSafe("#chart-trajectory", trajSpec);
+
+  function nearestForecastDate(iso) {
+    if (!dates.length) return null;
+    if (dates.indexOf(iso) >= 0) return iso;
+    if (iso < dates[0]) return dates[0];
+    if (iso > dates[dates.length - 1]) return dates[dates.length - 1];
+    var best = dates[0];
+    var bestDist = Infinity;
+    dates.forEach(function (d) {
+      var dist = Math.abs(Date.parse(d) - Date.parse(iso));
+      if (dist < bestDist) {
+        bestDist = dist;
+        best = d;
+      }
+    });
+    return best;
+  }
+
+  function renderMilestones() {
+    var host = document.getElementById("chart-milestones");
+    if (!host || typeof milestones !== "function" || !keyEvents.length) return;
+    host.innerHTML = "";
+    milestones("#chart-milestones")
+      .mapping({ timestamp: "date", text: "title" })
+      .parseTime("%Y-%m-%d")
+      .aggregateBy("day")
+      .labelFormat("%b %d")
+      .orientation("horizontal")
+      .distribution("top-bottom")
+      .optimize(true)
+      .autoResize(true)
+      .useLabels(true)
+      .onEventClick(function (d) {
+        var iso =
+          (d && (d.timestamp || d.date)) ||
+          (d && d.attributes && (d.attributes.timestamp || d.attributes.date));
+        if (!iso && d && d.text) {
+          var match = keyEvents.find(function (ev) {
+            return ev.title === d.text;
+          });
+          iso = match && match.date;
+        }
+        if (typeof iso === "object" && iso instanceof Date) {
+          iso = iso.toISOString().slice(0, 10);
+        }
+        iso = String(iso || "").slice(0, 10);
+        var target = nearestForecastDate(iso);
+        if (target) setSelectedDate(target, true);
+      })
+      .render(keyEvents);
+  }
 
   function gateFamily(name) {
     const s = String(name || "").toLowerCase();
@@ -574,6 +660,7 @@
   }
 
   setSelectedDate(latestDate, false);
+  renderMilestones();
 
   const tbody = document.getElementById("delta-table-body");
   HORIZON_LABELS.forEach(function (label, idx) {
