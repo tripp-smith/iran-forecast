@@ -1463,3 +1463,63 @@ date,evidence_item,source_type,impact,confidence,status
 2026-11-15,Houthi activity and regional proxy incidents,Conflict monitoring,Against,Medium,Confirmed pattern
 2026-11-15,Brent in low-mid $90s (down from peaks),Market data,Neutral (not decisive),High,Confirmed
 2026-11-15,June MOU lapsed; no formal peace,Diplomatic,Against,High,Confirmed
+2026-11-16,Hormuz transits ~65% below pre-war (UKMTO); AIS-visible far lower,Maritime reporting / trackers,Against,High,Confirmed
+2026-11-16,Oct Gulf oil exports 18.4 mb/d (26% below); crude 82% of pre-war; global surplus emerging,IEA,Mixed (partial recovery),High,Confirmed
+2026-11-16,War-risk premiums 6–10% of hull (40×+),Brokers / insurers,Against,High,Confirmed (quotes)
+2026-11-16,Recent drone attacks on Bahrain (intercepted); tanker incident reports,"UKMTO, Bahrain, IRGC claims",Against,Medium-High,Confirmed attacks; some mine claims disputed
+2026-11-16,Iranian crude exports ~0 under blockade,Tracking / reporting,Against,High,Confirmed
+2026-11-16,Three US carriers; high force posture,US military reporting,Against,High,Confirmed
+2026-11-16,Diplomacy stalled on Iran’s seven conditions; Ghalibaf: never pre-war status,"Iranian officials, mediators",Against,High,Confirmed statements
+2026-11-16,Trump/Rubio signals of possible restraint; economic pressure on Iran,US officials,Toward,Medium,Reported
+2026-11-16,Brent down from >$130 peaks to ~$93–96,Markets,Mixed,High,Confirmed
+2026-11-16,Houthi activity ongoing against Saudi,Coalition / reporting,Against,Medium-High,Confirmed
+2026-11-17,War ongoing ~9 months; June MOU expired; low-level strikes continue,"News/OSINT (CNN, CNBC, UN, trackers)",Against,High,Confirmed
+2026-11-17,Recent drone attacks on Bahrain; tanker incidents in Hormuz; third US carrier arrival,"News (CNBC, CNN, UKMTO, IRGC claims)",Against,High (attacks); Medium (some mine claims),Confirmed/Disputed
+2026-11-17,Hormuz transits substantially below pre-war (weekly counts ~65% down; AIS-visible very low),"UKMTO/JMIC, trackers",Against,High,Confirmed
+2026-11-17,Gulf oil exports recovered significantly via adaptations (~80%+ crude; some total flows near pre-war),"IEA, Kpler, Reuters",Mildly toward (adaptive),High,Confirmed
+2026-11-17,"LNG heavily disrupted; Ras Laffan ~17% capacity damage, ~3-year repair","QatarEnergy statements, energy reporting",Against (structural),High,Confirmed
+2026-11-17,War-risk premiums elevated (~7–9% recently),Insurance/shipping reports,Against,Medium-High,Confirmed
+2026-11-17,Iranian oil exports ~zero under blockade,Multiple trackers/news,Against,High,Confirmed
+2026-11-17,"Diplomacy active (Oman, Pakistan mediation; Araghchi travel)",News,Mildly toward,Medium,Confirmed
+2026-11-17,Houthi activity/advances,Conflict monitoring,Against,Medium,Confirmed/Inferred
+2026-11-17,Brent ~$92 (elevated but off peaks),Market data,Neutral (not decisive),High,Confirmed
+2026-11-17,US casualties 23; Iranian thousands,Official/OSINT,Context (limits appetite for escalation),Medium-High,Confirmed
+2026-11-18,"Ongoing low-level US-Iran kinetic exchanges (Bahrain/Kuwait drones, Qeshm strikes, tanker incidents)","Reuters, CENTCOM, regional media, UKMTO",Strongly against,High,Confirmed (exchanges); some Iranian claims disputed
+2026-11-18,AIS commercial crossings ~7% of pre-war; oil clearance ~48% of pre-war with bypasses,"Kpler, hormuz.now AIS/PortWatch, UKMTO",Against (partial oil recovery),High,Confirmed
+2026-11-18,War-risk rates 2–6% of hull (recent) vs ~0.25% pre-war; cover available but costly,"Marsh, WTW, Lloyd’s, IUMI",Against,High,Confirmed
+2026-11-18,Three US carriers + blockade; force posture elevated,"US officials, CENTCOM, news",Against,High,Confirmed
+2026-11-18,Talks via Oman/Qatar active but stalled on sequencing,"Iranian FM statements, mediators, Reuters",Mixed (process exists; substance stalled),Medium,Confirmed process; outcome inferred
+2026-11-18,LNG severely disrupted; ports inside Gulf at reduced activity,"Kpler, PortWatch",Against,Medium-High,Confirmed
+2026-11-18,Brent ~$92–93 (elevated but off peak); some export recovery via escorts/pipelines,"Market data, Kpler, IEA-related",Mixed,High,Confirmed
+2026-11-18,Houthi activity near Bab al-Mandab; proxy risk,Regional reporting,Against,Medium,Confirmed
+2026-11-18,US domestic political costs (midterms) and Trump statements on possible restraint,"News, polling references",Mixed/slightly toward (possible political incentive),Medium,Confirmed midterms; statements inferred
+2026-11-18,"Iranian conditions for Hormuz reopening (blockade lift, sanctions, role in management)",Iranian officials,Against (high bar),High,Confirmed claims
+2026-11-19,AIS commercial traffic ~5–6/day (~6% baseline); SEVERE threat,"AIS trackers, UKMTO/JMIC, Windward",Strongly against,High,Confirmed
+2026-11-19,Ongoing shipping attacks / claimed mines (Nov 10–18),"UKMTO, IRGC claims, wires",Against,High,Confirmed incidents; mine claims disputed in detail
+2026-11-19,War-risk premiums 6–10% hull value,"Brokers (Marsh et al.), FT/S&P reporting",Strongly against,Medium-High,Confirmed range; exact $64m figure disputed/contextual
+2026-11-19,US blockade of Iranian ports active; Iranian crude exports near zero,"CENTCOM, Kpler/Vortexa, UANI",Against (esp. Iranian flows),High,Confirmed
+2026-11-19,"Partial recovery in non-Iranian Gulf crude flows earlier in Nov, recent softening",Kpler/Vortexa/Bloomberg,Mixed,Medium,Confirmed partial; recent trend downward
+2026-11-19,"Intermittent US-Iran kinetic exchanges (Qeshm, Bahrain, Kuwait)","CENTCOM, Iranian statements, wires",Against,High,Confirmed
+2026-11-19,2 US CSGs in region supporting blockade,"US Navy/CENTCOM, Bloomberg/AP",Against rapid drawdown,High,Confirmed
+2026-11-19,Diplomacy stalled on nuclear/blockade conditions; MOU expired,"Official statements, mediators",Against near-term,Medium-High,Confirmed
+2026-11-19,Brent ~$92 with residual premium; IEA “largest disruption”,"Market data, IEA",Against full market normalization,High,Confirmed
+2026-11-19,Houthis retain Red Sea capability,Reporting on Bab el-Mandeb,Against,Medium,Confirmed residual risk
+2026-11-20,Ongoing mutual strikes (US on Qeshm; Iran on Bahrain/Kuwait),"Military reporting, news (Al Jazeera, GlobalSecurity, JINSA)",Against,High,Confirmed
+2026-11-20,Hormuz AIS/facilitated traffic far below 2025 baseline,"AIS trackers, UKMTO, UANI",Against,High,Confirmed
+2026-11-20,Extreme war-risk insurance costs,"US Navy official statements, insurer commentary, news",Against,Medium-High,Confirmed (exact $ figures vary)
+2026-11-20,Partial oil flow recovery via escorts/STS/pipelines,"Kpler, EIA-linked reporting",Mildly toward,Medium,Confirmed
+2026-11-20,Stalemated talks; US preference for blockade over major campaign,"Reuters, official statements",Against (short-term),High,Confirmed
+2026-11-20,Democratic midterm gains; failed war-powers vote,"News, Senate voting",Mildly toward (constrains escalation),High,Confirmed
+2026-11-20,Houthi activity / Bab el-Mandeb risks,Maritime reporting,Against,Medium,Confirmed
+2026-11-20,"~138+ maritime incidents, seafarer deaths since start",IMO/UKMTO via UANI,Against,High,Confirmed
+2026-11-21,"Ongoing limited US-Iran kinetic exchanges (Qeshm strikes, Bahrain/Kuwait drone attacks)","Reputable media, military statements",Strongly against (short-term),High,Confirmed
+2026-11-21,Hormuz AIS traffic ~9% of baseline; effective totals still well below normal,"Vessel trackers, UKMTO-style reporting, IMF PortWatch",Strongly against,High,Confirmed
+2026-11-21,War-risk premiums 6–10% of hull; extreme cost claims,"Brokers, S&P, US official testimony",Strongly against,High,Confirmed (exact $64m figure disputed)
+2026-11-21,Non-Iranian Gulf oil near pre-war via pipelines/STS,"Kpler, IEA, ship tracking",Mildly positive (partial resilience),High,Confirmed
+2026-11-21,Iranian crude effectively blocked since ~July,"UANI, trackers",Against (full oil recovery),High,Confirmed
+2026-11-21,Qatar LNG still far below pre-war (damage + transit),"S&P, Kpler, IEA",Against,Medium-High,Confirmed
+2026-11-21,Active Houthi attacks on Saudi capital/infrastructure,"Reuters, Saudi statements",Against (proxy restraint),High,Confirmed
+2026-11-21,Negotiations stalled on nuclear/sequencing,"Multiple media, mediator reports",Against,Medium-High,Confirmed
+2026-11-21,US three-carrier presence; blockade extended to STS,"Military statements, think tanks",Against (force drawdown),High,Confirmed
+2026-11-21,Brent ~$91–93 (elevated but not peak),Market data,Neutral to mild positive,High,Confirmed
+2026-11-21,Both sides prefer pressure over immediate deal,"Official statements, analysis",Against,Medium,Inferred from reporting

@@ -31,8 +31,14 @@
   },
   {
     "date": "2026-11-15",
-    "title": "Latest run",
+    "title": "Mid-November trough",
+    "band": "trough",
+    "note": "Softest multi-horizon reading in the series. 18-month 62%; 6-month 28%."
+  },
+  {
+    "date": "2026-11-21",
+    "title": "Latest run / partial rebound",
     "band": "latest",
-    "note": "Every horizon ends lower than 18 March. 18-month 62%; 6-month 28%."
+    "note": "18-month 68% (−12 vs March). Week rebound from the trough; medium/long horizons still below March."
   }
 ]

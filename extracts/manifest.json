@@ -1,12 +1,12 @@
 {
   "automationId": "f4632aec-9451-4d1e-bc62-b8558a00a0ab",
-  "extractedAt": "2026-11-15T19:27:05.430985Z",
-  "totalRunsFetched": 243,
-  "filesWritten": 242,
+  "extractedAt": "2026-11-21T21:55:54.142824Z",
+  "totalRunsFetched": 249,
+  "filesWritten": 248,
   "duplicatesArchived": 1,
   "errors": 0,
   "firstDay": "2026-03-18",
-  "lastDay": "2026-11-15",
+  "lastDay": "2026-11-21",
   "gaps": [
     {
       "from": "2026-05-17",
@@ -88,7 +88,7 @@
     {
       "taskResultId": "2bd4355e-2e9c-40e1-87ba-a1179d5ff681",
       "conversationId": "4d114b66-3187-4f34-9bb7-873c68c4b977",
-      "title": "Gulf normality odds unchanged at 2–80%",
+      "title": "Gulf normality odds unchanged at 2\u201380%",
       "status": "TASK_RESULT_SUCCESS",
       "createTime": "2026-03-20T08:39:13.174614Z",
       "updateTime": "2026-03-20T09:27:17.486994Z",
@@ -4429,6 +4429,114 @@
       "followUpDropped": false,
       "file": "forecasts/grok_iran_forecast-20261115.md",
       "messageChars": 17643,
+      "duplicateSiblings": 0
+    },
+    {
+      "taskResultId": "3d57acd4-5818-44a1-8f8d-a63d2b7cef82",
+      "conversationId": "ae677bd0-1cd2-44d0-ae7b-918271240627",
+      "title": "Hormuz transits hold at 65% below baseline",
+      "status": "TASK_RESULT_SUCCESS",
+      "createTime": "2026-11-16T09:44:03.050585Z",
+      "updateTime": "2026-11-16T09:45:19.981Z",
+      "dayEastern": "2026-11-16",
+      "turnCount": 2,
+      "senders": [
+        "human",
+        "ASSISTANT"
+      ],
+      "followUpDropped": false,
+      "file": "forecasts/grok_iran_forecast-20261116.md",
+      "messageChars": 16735,
+      "duplicateSiblings": 0
+    },
+    {
+      "taskResultId": "96325b0d-0d35-4fe3-a10e-9174cecef1ff",
+      "conversationId": "0fbca1b3-adfb-47fe-b5e6-19f5c957bce2",
+      "title": "New Hormuz transit data",
+      "status": "TASK_RESULT_SUCCESS",
+      "createTime": "2026-11-17T09:44:02.474089Z",
+      "updateTime": "2026-11-17T09:45:41.071Z",
+      "dayEastern": "2026-11-17",
+      "turnCount": 2,
+      "senders": [
+        "human",
+        "ASSISTANT"
+      ],
+      "followUpDropped": false,
+      "file": "forecasts/grok_iran_forecast-20261117.md",
+      "messageChars": 17038,
+      "duplicateSiblings": 0
+    },
+    {
+      "taskResultId": "1be6a095-3023-40d4-bf9c-6cc4ca535b5e",
+      "conversationId": "3d8c6b23-fd8f-4d1c-888a-dad91dc62d3e",
+      "title": "Iran War: 3% 1-week normality",
+      "status": "TASK_RESULT_SUCCESS",
+      "createTime": "2026-11-18T09:44:02.864706Z",
+      "updateTime": "2026-11-18T09:45:29.854Z",
+      "dayEastern": "2026-11-18",
+      "turnCount": 2,
+      "senders": [
+        "human",
+        "ASSISTANT"
+      ],
+      "followUpDropped": false,
+      "file": "forecasts/grok_iran_forecast-20261118.md",
+      "messageChars": 18752,
+      "duplicateSiblings": 0
+    },
+    {
+      "taskResultId": "8e60f274-4e0d-473a-a341-12f8f8418037",
+      "conversationId": "4386bfbf-cf90-4268-baeb-6b01494eb216",
+      "title": "Gulf normality odds rise",
+      "status": "TASK_RESULT_SUCCESS",
+      "createTime": "2026-11-19T09:44:03.854569Z",
+      "updateTime": "2026-11-19T09:45:23.795Z",
+      "dayEastern": "2026-11-19",
+      "turnCount": 2,
+      "senders": [
+        "human",
+        "ASSISTANT"
+      ],
+      "followUpDropped": false,
+      "file": "forecasts/grok_iran_forecast-20261119.md",
+      "messageChars": 14985,
+      "duplicateSiblings": 0
+    },
+    {
+      "taskResultId": "0d34443d-f3b1-4f76-b031-d4720803cc03",
+      "conversationId": "13af1314-6436-4074-aae1-72e000d39841",
+      "title": "Iran War: Probabilities Updated",
+      "status": "TASK_RESULT_SUCCESS",
+      "createTime": "2026-11-20T09:44:05.167378Z",
+      "updateTime": "2026-11-20T09:46:34.171Z",
+      "dayEastern": "2026-11-20",
+      "turnCount": 2,
+      "senders": [
+        "human",
+        "ASSISTANT"
+      ],
+      "followUpDropped": false,
+      "file": "forecasts/grok_iran_forecast-20261120.md",
+      "messageChars": 13591,
+      "duplicateSiblings": 0
+    },
+    {
+      "taskResultId": "10782213-fd35-48b3-813e-21986dc3fce8",
+      "conversationId": "5dd5dfb6-2930-430e-9245-11ce155a5ed6",
+      "title": "Gulf normality odds hold at 3%",
+      "status": "TASK_RESULT_SUCCESS",
+      "createTime": "2026-11-21T09:44:02.418683Z",
+      "updateTime": "2026-11-21T09:45:45.330Z",
+      "dayEastern": "2026-11-21",
+      "turnCount": 2,
+      "senders": [
+        "human",
+        "ASSISTANT"
+      ],
+      "followUpDropped": false,
+      "file": "forecasts/grok_iran_forecast-20261121.md",
+      "messageChars": 18369,
       "duplicateSiblings": 0
     }
   ]

@@ -316,28 +316,29 @@ def parse_sub_forecasts(text: str) -> list[dict[str, Any]]:
 
 
 def parse_horizon_detail_block(block: str) -> dict[str, str]:
+    # Same-line bullets only: `\s` would let `- **1 Month**\n  Probability`
+    # steal the next horizon's probability when sections are over-captured.
     bullet = r"[•\-\*]"
 
-    def grab(label: str) -> str:
-        m = re.search(
-            rf"{bullet}\s*{re.escape(label)}:\s*(.+?)(?=\n{bullet}|\Z)",
-            block,
-            re.DOTALL | re.IGNORECASE,
-        )
-        return m.group(1).strip() if m else ""
+    def grab(*labels: str) -> str:
+        for label in labels:
+            m = re.search(
+                rf"(?:^|\n)[ \t]*(?:{bullet}[ \t]*)?{re.escape(label)}:\s*(.+?)(?=\n[ \t]*(?:{bullet}[ \t]*)?[A-Za-z*]|\Z)",
+                block,
+                re.DOTALL | re.IGNORECASE,
+            )
+            if m:
+                return m.group(1).strip()
+        return ""
 
     # Accept plain, bold, and simple ranges (15-20% -> first value).
+    # Prefer the first Probability in this horizon block; do not cross newlines
+    # after a list marker (that pattern matches the *next* horizon heading).
     prob_m = re.search(
-        rf"{bullet}\s*Probability:\s*\**(\d+)(?:\s*[-–]\s*\d+)?\s*%\**",
+        rf"(?:^|\n)[ \t]*(?:{bullet}[ \t]*)?Probability:\s*\**(\d+)(?:\s*[-–]\s*\d+)?\s*%\**",
         block,
         re.IGNORECASE,
     )
-    if not prob_m:
-        prob_m = re.search(
-            r"Probability:\s*\**(\d+)(?:\s*[-–]\s*\d+)?\s*%\**",
-            block,
-            re.IGNORECASE,
-        )
     prob = prob_m.group(1) if prob_m else ""
 
     return {
@@ -346,9 +347,15 @@ def parse_horizon_detail_block(block: str) -> dict[str, str]:
         "current_evidence_adjustment": grab("Current-evidence adjustment"),
         "core_rationale": grab("Core rationale"),
         "main_gating_factor": grab("Main gating factor"),
-        "raise_forecast": grab("What would raise this forecast materially"),
-        "lower_forecast": grab("What would lower this forecast materially"),
-        "confidence": grab("Confidence in this estimate"),
+        "raise_forecast": grab(
+            "What would raise this forecast materially",
+            "What would raise materially",
+        ),
+        "lower_forecast": grab(
+            "What would lower this forecast materially",
+            "What would lower materially",
+        ),
+        "confidence": grab("Confidence in this estimate", "Confidence"),
     }
 
 
@@ -368,14 +375,28 @@ def parse_final_probability_sections(text: str) -> dict[str, dict[str, str]]:
             end_idx = pos
     section = rest[:end_idx]
 
+    # Headings may be `**1 Week**`, `- **1 Week**`, `**• 1 Week**`, or `• **1 Week**`.
+    horizon_alt = r"1 Week|1 Month|3 Months|6 Months|1 Year|18 Months|Most Likely Path"
+    heading_prefix = rf"(?:^|\n)[ \t]*(?:[•\-\*][ \t]*)?(?:\*\*[ \t]*[•\-\*]?[ \t]*)?"
+    heading_suffix = r"(?:\*\*)?[ \t]*:?[ \t]*\n"
+
     result: dict[str, dict[str, str]] = {}
     for label in HORIZON_LABELS:
         pat = (
-            rf"\*\*{re.escape(label)}\*\*\s*:?\s*\n(.*?)(?="
-            rf"\n\*\*(?:1 Week|1 Month|3 Months|6 Months|1 Year|18 Months|Most Likely Path)\*\*"
+            rf"{heading_prefix}\*\*[ \t]*{re.escape(label)}[ \t]*\*\*[ \t]*:?[ \t]*\n"
+            rf"(.*?)(?="
+            rf"{heading_prefix}(?:\*\*[ \t]*)?(?:{horizon_alt})(?:\*\*)?[ \t]*:?[ \t]*\n"
             rf"|\Z)"
         )
         m = re.search(pat, section, re.DOTALL)
+        if not m:
+            # Legacy tight pattern (no list marker).
+            pat = (
+                rf"\*\*{re.escape(label)}\*\*\s*:?\s*\n(.*?)(?="
+                rf"\n\*\*(?:{horizon_alt})\*\*"
+                rf"|\Z)"
+            )
+            m = re.search(pat, section, re.DOTALL)
         if not m:
             continue
         result[label] = parse_horizon_detail_block(m.group(1))
@@ -494,7 +515,11 @@ def parse_summary_table(text: str) -> list[dict[str, str]]:
 
 
 def conflict_day_from_snapshot(snapshot: str) -> str:
-    m = re.search(r"~Day\s*(\d+)", snapshot, re.IGNORECASE)
+    # Formats seen: "~Day 120", "Day ~120", "day ~267 of the conflict"
+    m = re.search(r"(?:~Day|Day\s*~|day\s*~)\s*(\d+)", snapshot, re.IGNORECASE)
+    if m:
+        return m.group(1)
+    m = re.search(r"\bDay\s+(\d+)\b", snapshot, re.IGNORECASE)
     return m.group(1) if m else ""
 
 
@@ -1032,7 +1057,7 @@ def build_html(
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Persian Gulf normality odds fall from March to mid-November 2026</title>
+  <title>Persian Gulf normality odds stay below March after a late-November rebound</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -1322,10 +1347,10 @@ def build_html(
         ACTIVE CONFLICT
       </div>
       <h1 class="heading-font text-4xl md:text-6xl font-semibold tracking-tighter leading-tight mb-3">
-        Persian Gulf normality odds fall from March through mid-November 2026
+        Persian Gulf normality odds stay below March after a late-November rebound
       </h1>
       <p class="text-zinc-400 max-w-3xl text-lg">
-        Daily superforecasts of functional normality after the 2026 Iran War: 18-month odds drop from 80% to 62%; 6-month odds from 45% to 28%.
+        Daily superforecasts of functional normality after the 2026 Iran War: 18-month odds 80% → 68%; 6-month 45% → 38%. Mid-November trough partially reversed by 21 November.
       </p>
       <div class="mt-6 flex flex-wrap gap-4 text-sm">
         <div class="bg-zinc-900/80 border border-zinc-700 rounded-xl px-4 py-2">
@@ -1346,7 +1371,7 @@ def build_html(
 
   <section id="trajectory" class="max-w-screen-2xl mx-auto px-4 md:px-8 py-10 border-b border-zinc-800">
     <div class="text-xs font-mono uppercase text-cyan-400 mb-2">Trajectory</div>
-    <h2 class="heading-font text-2xl md:text-3xl font-semibold mb-4">April and June lifts reverse; by mid-November every horizon sits below March</h2>
+    <h2 class="heading-font text-2xl md:text-3xl font-semibold mb-4">April and June lifts reverse; late November rebounds from the trough but stays below March</h2>
     <p class="text-zinc-400 text-sm max-w-3xl mb-6">Probability curves with vertical event markers. Timeline below uses the same key dates — click a label to open that day’s briefing.</p>
     <div id="chart-trajectory" class="w-full min-h-[380px]"></div>
     <div class="text-xs font-mono uppercase text-amber-300 mt-8 mb-2">Key events</div>
@@ -1429,7 +1454,7 @@ def build_html(
 
   <section id="deltas" class="max-w-screen-2xl mx-auto px-4 md:px-8 py-10 border-b border-zinc-800">
     <div class="text-xs font-mono uppercase text-cyan-400 mb-2">First → latest</div>
-    <h2 class="heading-font text-2xl md:text-3xl font-semibold mb-4">18-month normality odds drop 18 points; every horizon ends lower</h2>
+    <h2 class="heading-font text-2xl md:text-3xl font-semibold mb-4">18-month normality odds drop 12 points; medium and long horizons stay below March</h2>
     <div class="overflow-x-auto">
       <table class="w-full text-sm border border-zinc-800 rounded-xl overflow-hidden">
         <thead class="bg-zinc-900 text-zinc-400 text-xs font-mono">
@@ -1450,7 +1475,7 @@ def build_html(
   <section id="qualitative" class="max-w-screen-2xl mx-auto px-4 md:px-8 py-10 border-b border-zinc-800 bg-black/40">
     <div class="text-xs font-mono uppercase text-amber-300 mb-2">Longitudinal memo</div>
     <h2 class="heading-font text-2xl md:text-3xl font-semibold mb-2 max-w-3xl">Why the curve fell: settlements failed and commercial gates stayed binding</h2>
-    <p class="text-zinc-400 text-sm md:text-base mb-6 max-w-2xl">242 daily runs · 18 Mar – 15 Nov 2026 · functional normality, not ceasefire alone</p>
+    <p class="text-zinc-400 text-sm md:text-base mb-6 max-w-2xl">{len(parsed)} daily runs · 18 Mar – 21 Nov 2026 · functional normality, not ceasefire alone</p>
     <div id="qualitative-body" class="memo-body bg-zinc-900/80 border border-zinc-700 rounded-2xl p-6 md:p-8 text-zinc-300"></div>
     <script type="text/template" id="qualitative-md">{qual_escaped}</script>
   </section>

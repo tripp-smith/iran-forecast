@@ -1,5 +1,5 @@
 {
-  "parsed_files": 242,
+  "parsed_files": 248,
   "parse_failures": [],
   "missing_any_headline_probability": [],
   "partial_horizons": [],
@@ -196,7 +196,9 @@
     "2026-11-05",
     "2026-11-08",
     "2026-11-09",
-    "2026-11-10"
+    "2026-11-10",
+    "2026-11-18",
+    "2026-11-19"
   ],
   "headline_probability_coverage": 1.0
 }
